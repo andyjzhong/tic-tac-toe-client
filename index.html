@@ -14,9 +14,17 @@
     </head>
 
     <!-- This is for creating the nav bo -->
-    <nav>We probably want to have a nav bar here later for signing in.
+    <nav>
+      <form id="sign-up">
+        <fieldset>
+          <legend>Sign up to Play!</legend>
+          <input type="text" name="credentials[email]" id="sign-up-email" placeholder="Your Email Address">
+          <input type="password" name="credentials[password]" id="sign-up-password" placeholder="Create a Password">
+          <input type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" placeholder="Reenter Your Password">
+          <input type="submit" name="submit" value="Create Account">
+        </fieldset>
+      </form>
     </nav>
-
 
     <body class="container-fluid">
       <h1>Tic Tac Toe Game</h1>
