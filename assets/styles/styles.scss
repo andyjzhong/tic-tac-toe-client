@@ -1,0 +1,13 @@
+.gameboard {
+  border: 1px solid $test-color;
+  height: 200px;
+  width: 80%;
+}
+
+.box {
+  background-color: $board-background-color;
+  border: 1px solid $board-border-color;
+  color: $board-text-color;
+  height: 180px;
+  text-align: center;
+}
