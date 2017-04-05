@@ -14,19 +14,47 @@
     </head>
 
     <!-- This is for creating the nav bo -->
-    <nav>
-      <form id="sign-up">
-        <fieldset>
-          <legend>Sign up to Play!</legend>
-          <input type="text" name="credentials[email]" id="sign-up-email" placeholder="Your Email Address">
-          <input type="password" name="credentials[password]" id="sign-up-password" placeholder="Create a Password">
-          <input type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" placeholder="Re-enter Your Password">
-          <input type="submit" name="submit" value="Create Account">
-        </fieldset>
-      </form>
-    </nav>
+    <nav> This is a navbar.</nav>
 
     <body class="container-fluid">
+
+      <div class="forms-main">
+        <form id="sign-up">
+          <fieldset>
+            <legend>Sign up to Play!</legend>
+            <input type="text" name="credentials[email]" id="sign-up-email" placeholder="Your Email Address">
+            <input type="password" name="credentials[password]" id="sign-up-password" placeholder="Create a Password">
+            <input type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" placeholder="Re-enter Your Password">
+            <input type="submit" name="submit" value="Create Account">
+          </fieldset>
+        </form>
+
+        <form id="sign-in">
+          <fieldset>
+            <legend>Sign in</legend>
+            <input type="text" name="credentials[email]" id="sign-in-email" placeholder="Your Email Address">
+            <input type="password" name="credentials[password]" id="sign-in-password" placeholder="Your Password">
+            <input type="submit" name="submit" value="Sign in!">
+          </fieldset>
+        </form>
+
+        <form id="sign-out">
+          <fieldset>
+            <legend>Sign out</legend>
+            <input type="submit" name="submit" value="Sign Out!">
+          </fieldset>
+        </form>
+
+        <form id="change-password">
+          <fieldset>
+            <legend>Change Password</legend>
+            <input type="password" name="passwords[old]" id="old-password" placeholder="Gimme yo Password">
+            <input type="password" name="passwords[new]" id="new-password" placeholder="Gimme a NEW Password">
+            <input type="submit" name="submit" value="Change Password">
+          </fieldset>
+        </form>
+      </div>
+
       <h1>Tic Tac Toe Game</h1>
 
       <p>This is a whole paragraph about the game. Maybe include a list of directions or something later. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
