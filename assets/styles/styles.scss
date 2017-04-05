@@ -1,13 +1,28 @@
+body {
+  background-color: #ffe7ba;
+}
+
+h1 {
+  text-align: center;
+}
+
 .gameboard {
   border: 1px solid $test-color;
   height: 200px;
   width: 80%;
+  margin: 80px auto;
 }
 
 .box {
   background-color: $board-background-color;
   border: 1px solid $board-border-color;
+  padding: 80px;
   color: $board-text-color;
   height: 180px;
+  text-align: center;
+}
+
+footer {
+  clear: both;
   text-align: center;
 }
