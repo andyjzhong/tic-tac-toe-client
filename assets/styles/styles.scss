@@ -1,16 +1,24 @@
 body {
   background-color: $page-background-color;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 h1 {
+  margin: 60px auto;
   text-align: center;
 }
 
 .gameboard {
-  border: 1px solid $test-color;
-  height: 200px;
+  border: 1px dotted $test-color;
+  height: 548px;
   margin: 80px auto;
-  width: 80%;
+  width: 75%;
+}
+
+.row {
+  border: 1px dotted $test-color;
+  margin: auto;
+  width: 64%;
 }
 
 .box {
@@ -18,7 +26,7 @@ h1 {
   border: 1px solid $board-border-color;
   color: $board-text-color;
   height: 180px;
-  max-width: 225px;
+  max-width: 200px;
   padding: 75px;
   text-align: center;
 }
