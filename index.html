@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
     <head>
-      <title>Example</title>
+      <title>Tic Tac Toe Game</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags unless you know what you are doing -->
@@ -11,15 +12,45 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body class="container-fluid">
-      <h1>Example</h1>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+    <nav>We probably want to have a nav bar here later for signing in.
+    </nav>
+
+
+    <body class="container-fluid">
+      <h1>Tic Tac Toe Game</h1>
+
+      <p>This is a whole paragraph about the game. Maybe include a list of directions or something later. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
       eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
       minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
       ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
       velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
       est laborum.</p>
+
+      <!-- This is for creating the actual gameboard -->
+      <div class="gameboard">
+        <div class="row">
+          <div class="col-xs-4 box board">L1</div>
+          <div class="col-xs-4 box board">M1</div>
+          <div class="col-xs-4 box board">R1</div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-4 box board">L2</div>
+          <div class="col-xs-4 box board">M2</div>
+          <div class="col-xs-4 box board">R2</div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-4 box board">L3</div>
+          <div class="col-xs-4 box board">M3</div>
+          <div class="col-xs-4 box board">R3</div>
+        </div>
+      </div>
+
     </body>
+
+    <footer> Here is a footer for later.</footer>
+
 </html>
