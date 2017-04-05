@@ -8,17 +8,32 @@ h1 {
   text-align: center;
 }
 
+aside {
+  border: 1px dotted $aside-border-color;
+  float: left;
+  width: 20%;
+  height: 590px;
+  background-color: $aside-background-color;
+}
+
+main {
+  border: 1px dotted $aside-border-color;
+  float: right;
+  width: 80%;
+}
+
 .gameboard {
   border: 1px dotted $test-color;
   height: 548px;
-  margin: 80px auto;
-  width: 75%;
+  margin: 20px auto;
+  width: 60%;
+  font-size: 18px;
 }
 
 .row {
   border: 1px dotted $test-color;
   margin: auto;
-  width: 64%;
+  width: 100%;
 }
 
 .box {
