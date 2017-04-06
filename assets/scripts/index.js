@@ -15,8 +15,11 @@ require('./example')
 
 // Go get the information from the events.js file.
 const authEvents = require('./auth/events.js')
-
+const authGame = require('./auth/game.js')
 // On document ready, execute event handlers.
 $(() => {
   authEvents.addHandlers()
+  authEvents.gameStart()
+  authEvents.setMessage()
+  authGame.clickHandler()
 })
