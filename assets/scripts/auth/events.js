@@ -30,10 +30,19 @@ const onSignIn = function (event) {
 const onSignOut = function (event) {
   console.log('sign out ran')
   event.preventDefault()
-
-  api.signOut()
+  const data = getFormFields(this)
+  api.signOut(data)
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
+}
+
+const onChangePassword = function (event) {
+  console.log('change password ran')
+  event.preventDefault()
+  const data = getFormFields(this)
+  api.changePassword(data)
+    .then(ui.changePasswordSuccess)
+    .catch(ui.changePasswordFailure)
 }
 
 // Creates an event handler to listen for when the submit button is clicked.
@@ -41,6 +50,7 @@ const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#sign-out').on('submit', onSignOut)
+  $('#change-password').on('submit', onChangePassword)
 }
 
 // Exports out the addHandlers function.
