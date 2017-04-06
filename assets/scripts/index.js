@@ -23,5 +23,4 @@ $(() => {
   authEvents.setMessage()
   authGame.clickHandler()
   authGame.setUpGameBoard()
-  authGame.updateCell()
 })

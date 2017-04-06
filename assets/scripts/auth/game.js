@@ -17,6 +17,7 @@ const start = function () {
   $(this).unbind()
 }
 
+// Creates the cell IDs.
 let gameCellIds = [
   'box-0',
   'box-1',
@@ -43,15 +44,17 @@ const gameObject = {
   }
 }
 
+// This adds an event listener every time a box is clicked, run the updateCell function.
 const setUpGameBoard = function () {
   console.log('setUpGameBoard ran!')
   for (let i = 0; i < gameCellIds.length; i++) {
-    const elementID = gameCellIds[i]
-    const element = document.getElementById(elementID)
+    const elementId = gameCellIds[i]
+    const element = document.getElementById(elementId)
     element.addEventListener('click', updateCell)
   }
 }
 
+// This logs an id into the gameObject array.
 const updateCell = function () {
   console.log(currentPlayer)
   const id = this.id
