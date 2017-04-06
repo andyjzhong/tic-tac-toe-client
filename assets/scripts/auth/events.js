@@ -17,25 +17,33 @@ const onSignUp = function (event) {
     .catch(ui.signUpFailure)
 }
 
-// This function is to help figure out who starts the game.
-const gameStart = function () {
-  document.turn = 'X'
-  setMessage(document.turn + ' gets to start.')
+const onSignIn = function (event) {
+  console.log('sign in ran')
+  event.preventDefault()
+
+  const data = getFormFields(this)
+  api.signIn(data)
+    .then(ui.signInSuccess)
+    .catch(ui.signInFailure)
 }
 
-// This function is for setting the message for whose turn it is.
-const setMessage = function (msg) {
-  document.getElementById('message').innerText = msg
+const onSignOut = function (event) {
+  console.log('sign out ran')
+  event.preventDefault()
+
+  api.signOut()
+    .then(ui.signOutSuccess)
+    .catch(ui.signOutFailure)
 }
 
 // Creates an event handler to listen for when the submit button is clicked.
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
+  $('#sign-in').on('submit', onSignIn)
+  $('#sign-out').on('submit', onSignOut)
 }
 
 // Exports out the addHandlers function.
 module.exports = {
-  gameStart,
-  setMessage,
   addHandlers
 }
