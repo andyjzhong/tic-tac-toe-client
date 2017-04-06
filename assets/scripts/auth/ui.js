@@ -1,5 +1,5 @@
 'use strict'
-// Don't worry about the linter on SignUp ...yet!
+
 const store = require('../store')
 
 const signUpSuccess = (data) => {
@@ -30,11 +30,21 @@ const signOutFailure = (error) => {
   console.error('signOut failure ran. error is :', error)
 }
 
+const changePasswordSuccess = (data) => {
+  console.log('changePassword success ran. data is :', data)
+}
+
+const changePasswordFailure = (error) => {
+  console.error('changePassword failure ran. error is :', error)
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
   signInFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  changePasswordSuccess,
+  changePasswordFailure
 }
