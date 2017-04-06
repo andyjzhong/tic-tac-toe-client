@@ -14,7 +14,27 @@ const signUp = (data) => {
   })
 }
 
+const signIn = (data) => {
+  return $.ajax({
+    url: config.apiOrigin + '/sign-in/',
+    method: 'POST',
+    data: data
+  })
+}
+
+const signOut = () => {
+  return $.ajax({
+    url: config.apiOrigin + '/sign-out/' + store.user.id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 // Exports out the signUp Ajax function.
 module.exports = {
-  signUp
+  signUp,
+  signIn,
+  signOut
 }

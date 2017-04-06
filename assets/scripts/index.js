@@ -19,8 +19,6 @@ const authGame = require('./game-logic/game.js')
 // On document ready, execute event handlers.
 $(() => {
   authEvents.addHandlers()
-  authEvents.gameStart()
-  authEvents.setMessage()
   authGame.clickHandler()
   authGame.setUpGameBoard()
 })
