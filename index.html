@@ -48,8 +48,8 @@
         <form id="change-password">
           <fieldset>
             <legend>Change Password</legend>
-            <input type="password" name="passwords[old]" id="old-password" placeholder="Gimme yo Password">
-            <input type="password" name="passwords[new]" id="new-password" placeholder="Gimme a NEW Password">
+            <input type="password" name="passwords[old]" id="old-password" placeholder="Enter Old Password">
+            <input type="password" name="passwords[new]" id="new-password" placeholder="Enter New Password">
             <input type="submit" name="submit" value="Change Password">
           </fieldset>
         </form>
@@ -75,21 +75,21 @@
           <!-- This is for creating the actual gameboard -->
           <div class="gameboard">
             <div class="row">
-              <div class="col-xs-4 left top box">Left Top</div>
-              <div class="col-xs-4 center top box">Center Top</div>
-              <div class="col-xs-4 right top box">Right Top</div>
+              <div id="box-0" class="col-xs-4 left top box">Left Top</div>
+              <div id="box-1" class="col-xs-4 center top box">Center Top</div>
+              <div id="box-2" class="col-xs-4 right top box">Right Top</div>
             </div>
 
             <div class="row">
-              <div class="col-xs-4 left mid box">Left Mid</div>
-              <div class="col-xs-4 center mid box">Center Mid</div>
-              <div class="col-xs-4 right mid box">Right Mid</div>
+              <div id="box-3" class="col-xs-4 left mid box">Left Mid</div>
+              <div id="box-4" class="col-xs-4 center mid box">Center Mid</div>
+              <div id="box-5" class="col-xs-4 right mid box">Right Mid</div>
             </div>
 
             <div class="row">
-              <div class="col-xs-4 left bot box">Left Bot</div>
-              <div class="col-xs-4 center bot box">Center Bot</div>
-              <div class="col-xs-4 right bot box">Right Bot</div>
+              <div id="box-6" class="col-xs-4 left bot box">Left Bot</div>
+              <div id="box-7" class="col-xs-4 center bot box">Center Bot</div>
+              <div id="box-8" class="col-xs-4 right bot box">Right Bot</div>
             </div>
           </div>
         </main>
