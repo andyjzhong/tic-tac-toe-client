@@ -6,7 +6,7 @@ let currentPlayer = 'O'
 
 // This alternates player turns.
 const currentTurn = function () {
-  console.log("It's " + currentPlayer + "'s turn now.'")
+  console.log("It's " + currentPlayer + "'s turn now.")
   currentPlayer = currentPlayer === player1 ? player2 : player1
   return currentPlayer
 }
@@ -18,7 +18,7 @@ const start = function () {
 }
 
 // Creates the cell IDs.
-let gameCellIds = [
+const gameCellIds = [
   '0',
   '1',
   '2',
@@ -33,7 +33,7 @@ let gameCellIds = [
 // This creates the game object for logging the user
 const gameObject = {
   'game': {
-    'id': 3,
+    'id': 1,
     'cells': ['null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null'],
     'over': false,
     'player_x': {
@@ -58,7 +58,7 @@ const setUpGameBoard = function () {
 const updateCell = function () {
   console.log(currentPlayer)
   const id = this.id
-  console.log('this element id = ' + id)
+  console.log('ID of clicked box = ' + id)
   const index = id.split('-')
   // const index = index1[1]
   gameObject.game.cells[index] = currentPlayer
