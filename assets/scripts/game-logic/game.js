@@ -68,6 +68,14 @@ const updateCell = function () {
 const clickHandler = () =>
   $('.box').on('click', start)
 
+// Function for button to reset the game board.
+const clearBoard = function () {
+  console.log('Clearboard ran!')
+}
+
+const resetHandler = () =>
+  $('#reset-board').on('click', clearBoard)
+
 /*
 // These next few functions help determine whether or not there is a winner.
 const winChecker = function () {
@@ -93,5 +101,7 @@ const winCombos = [
 module.exports = {
   clickHandler,
   setUpGameBoard,
-  updateCell
+  updateCell,
+  clearBoard,
+  resetHandler
 }
