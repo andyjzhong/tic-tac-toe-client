@@ -1,10 +1,22 @@
-nav {
-  position: fixed;
+.navbar {
   background-color: $nav-background-color;
+  color: $nav-text-color;
+  position: fixed;
   width: 100%;
-  margin: 10px auto;
+  margin: 0;
   padding: 10px;
 }
+
+.navbar-text {
+
+}
+
+/*
+.navbar.logo {
+  height: 10%;
+  width: 20%;
+}
+*/
 
 body {
   background-color: $page-background-color;
@@ -23,7 +35,7 @@ h1 {
 }
 
 aside {
-  border: 1px dotted $aside-border-color;
+  /* border: 1px dotted $aside-border-color; */
   float: left;
   width: 20%;
   height: 590px;
@@ -31,9 +43,10 @@ aside {
 }
 
 main {
-  border: 1px dotted $aside-border-color;
+  /* border: 1px dotted $aside-border-color; */
   float: right;
   width: 80%;
+  background-color: $main-background-color;
 }
 
 .gameboard {
@@ -45,14 +58,14 @@ main {
 }
 
 .row {
-  border: 1px dotted $test-color;
+  /* border: 1px dotted $test-color; */
   margin: auto;
   width: 100%;
 }
 
 .box {
   background-color: $board-background-color;
-  border: 1px solid $board-border-color;
+  border: 3px solid $board-border-color;
   color: $board-text-color;
   height: 180px;
   max-width: 200px;
@@ -60,6 +73,11 @@ main {
   text-align: center;
 }
 
-footer {
+/*
+.footer {
+  float: both;
   text-align: center;
+  background-color: $footer-background-color
+  color:
 }
+*/
