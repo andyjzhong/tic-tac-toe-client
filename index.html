@@ -13,61 +13,61 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
 
-    <!-- This is for creating the nav bo -->
-    <nav> This is a navbar.</nav>
-
+    <!-- This is for creating the nav bar -->
     <body class="container-fluid">
 
-      <div class="forms-main">
-        <form id="sign-up">
-          <fieldset>
-            <legend>Sign up to Play!</legend>
-            <input type="text" name="credentials[email]" id="sign-up-email" placeholder="Your Email Address">
-            <input type="password" name="credentials[password]" id="sign-up-password" placeholder="Create a Password">
-            <input type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" placeholder="Re-enter Your Password">
-            <input type="submit" name="submit" value="Create Account">
-          </fieldset>
-        </form>
-
-        <form id="sign-in">
-          <fieldset>
-            <legend>Sign in</legend>
-            <input type="text" name="credentials[email]" id="sign-in-email" placeholder="Your Email Address">
-            <input type="password" name="credentials[password]" id="sign-in-password" placeholder="Your Password">
-            <input type="submit" name="submit" value="Sign in!">
-          </fieldset>
-        </form>
-
-        <form id="sign-out">
-          <fieldset>
-            <legend>Sign out</legend>
-            <input type="submit" name="submit" value="Sign Out!">
-          </fieldset>
-        </form>
-
-        <form id="change-password">
-          <fieldset>
-            <legend>Change Password</legend>
-            <input type="password" name="passwords[old]" id="old-password" placeholder="Enter Old Password">
-            <input type="password" name="passwords[new]" id="new-password" placeholder="Enter New Password">
-            <input type="submit" name="submit" value="Change Password">
-          </fieldset>
-        </form>
-      </div>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+              <img class="Logo" alt="General Assembly" src="http://designforamerica.com/wp-content/uploads/2015/03/General-Assembly.png">
+            </a>
+            <p class="navbar-text">Tic Tac Toe</p>
+          </div>
+        </div>
+      </nav>
 
       <h1>Tic Tac Toe Game</h1>
 
-      <p>This is a whole paragraph about the game. Maybe include a list of directions or something later. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
-
       <div class="wrapper">
         <aside>
-          <p>Area for Recording Scores</p>
+          <p>Area for Signing In</p>
+          <div class="forms-main">
+            <form id="sign-up">
+              <fieldset>
+                <legend>Sign up to Play!</legend>
+                <input type="text" name="credentials[email]" id="sign-up-email" placeholder="Your Email Address">
+                <input type="password" name="credentials[password]" id="sign-up-password" placeholder="Create a Password">
+                <input type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" placeholder="Re-enter Your Password">
+                <input type="submit" name="submit" value="Create Account">
+              </fieldset>
+            </form>
+
+            <form id="sign-in">
+              <fieldset>
+                <legend>Sign in</legend>
+                <input type="text" name="credentials[email]" id="sign-in-email" placeholder="Your Email Address">
+                <input type="password" name="credentials[password]" id="sign-in-password" placeholder="Your Password">
+                <input type="submit" name="submit" value="Sign in!">
+              </fieldset>
+            </form>
+
+            <form id="sign-out">
+              <fieldset>
+                <legend>Sign out</legend>
+                <input type="submit" name="submit" value="Sign Out!">
+              </fieldset>
+            </form>
+
+            <form id="change-password">
+              <fieldset>
+                <legend>Change Password</legend>
+                <input type="password" name="passwords[old]" id="old-password" placeholder="Enter Old Password">
+                <input type="password" name="passwords[new]" id="new-password" placeholder="Enter New Password">
+                <input type="submit" name="submit" value="Change Password">
+              </fieldset>
+            </form>
+          </div>
         </aside>
 
         <main>
@@ -101,8 +101,9 @@
         </div>
         </main>
       </div>
+
     </body>
 
-    <footer> (C) andyjzhong </footer>
+    <footer class="footer"> (C) andyjzhong </footer>
 
 </html>
