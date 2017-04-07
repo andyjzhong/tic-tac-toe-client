@@ -68,6 +68,7 @@ const updateCell = function () {
 const clickHandler = () =>
   $('.box').on('click', start)
 
+/*
 // These next few functions help determine whether or not there is a winner.
 const winChecker = function () {
   console.log('winChecker ran!')
@@ -84,9 +85,10 @@ const winCombos = [
   [0, 4, 8],
   [2, 4, 6]
 ]
+*/
+// Make a function that looks at the game object array. If the array matches the
 
 // Use a forEach function in order to run winChecker.
-forEach.
 
 module.exports = {
   clickHandler,
