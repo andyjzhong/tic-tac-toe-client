@@ -30,22 +30,6 @@ const gameCellIds = [
   '8'
 ]
 
-// This creates the game object for logging the user
-/*
-const gameObject = {
-  'game': {
-    'id': 1,
-    'cells': ['null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null'],
-    'over': false,
-    'player_x': {
-      'id': 1,
-      'email': 'and@and.com'
-    },
-    'player_o': null
-  }
-}
-*/
-
 // This adds an event listener every time a box is clicked, run the updateCell function.
 const setUpGameBoard = function () {
   console.log('setUpGameBoard ran!')
@@ -56,7 +40,7 @@ const setUpGameBoard = function () {
   }
 }
 
-// This logs an id into the gameObject array.
+// This logs an X or O into the gameBoard array.
 const updateCell = function () {
   console.log(currentPlayer)
   const id = this.id
@@ -84,22 +68,18 @@ const winCombos = [
   [3, 4, 5],
   [6, 7, 8],
   [0, 3, 6],
-  [1, 4, 5],
+  [1, 4, 7],
   [2, 5, 8],
   [0, 4, 8],
   [2, 4, 6]
 ]
-
-const threeInARow = function () {
-
-}
 
 // Array to check win status. Build array during game.
 const gameBoard = new Array(9)
 
 // To see if X has won any of the rows.
 const xWinsRow = function () {
-// This checks each of the rows to see if 3 cells in a row are filled with X's.
+// This checks each of the rows to see if 3 cells in a ROW are filled with X's.
   if ((gameBoard[0] === 'X' && gameBoard[1] === 'X' && gameBoard[2] === 'X') ||
   (gameBoard[3] === 'X' && gameBoard[4] === 'X' && gameBoard[5] === 'X') ||
   (gameBoard[6] === 'X' && gameBoard[7] === 'X' && gameBoard[8] === 'X')) {
@@ -107,10 +87,26 @@ const xWinsRow = function () {
   }
 }
 
+const xWinsCol = function () {
+// This checks each of the rows to see if 3 cells in a COL are filled with X's.
+  if ((gameBoard[0] === 'X' && gameBoard[3] === 'X' && gameBoard[6] === 'X') ||
+  (gameBoard[1] === 'X' && gameBoard[4] === 'X' && gameBoard[7] === 'X') ||
+  (gameBoard[2] === 'X' && gameBoard[5] === 'X' && gameBoard[8] === 'X')) {
+    console.log('True')
+  }
+}
+
+const xWinsDiag = function () {
+// This checks each of the rows to see if 3 cells in a DIAG are filled with X's.
+  if ((gameBoard[0] === 'X' && gameBoard[4] === 'X' && gameBoard[8] === 'X') ||
+  (gameBoard[2] === 'X' && gameBoard[4] === 'X' && gameBoard[6] === 'X')) {
+    console.log('True')
+  }
+}
+
 // Requirements for X to win.
 const xWins = function () {
-  return xWinsRow()
-  // || xWinsColumns() || xWinsDiagonal()
+  return xWinsRow() || xWinsCol() || xWinsDiag()
 }
 
 // Requirements for O to win.
