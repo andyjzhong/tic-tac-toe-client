@@ -1,14 +1,17 @@
 #my-navbar {
   background-color: $nav-background-color;
+  background-size: cover;
   color: $navbar-text-color;
 }
 
 .jumbotron {
   background-color: $jumbotron-background-color;
+  opacity: .95;
 }
 
 body {
-  background-color: $page-background-color;
+  background-image: url('../images/paint.jpg');
+  background-attachment: fixed;
   font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -37,6 +40,11 @@ h1 {
 h4 {
   margin: 60px 20px auto;
   text-align: center;
+}
+
+.block {
+  background-color: $section-background-color;
+  opacity: .95;
 }
 
 .gameboard {
@@ -69,10 +77,10 @@ h4 {
   background-color: $board-background-color;
   border: 2px solid $board-border-color;
   font-size: 160px;
-  color: $taninacan;
+  color: $black;
   height: 15em;
   max-height: 200px;
-  opacity: .2;
+  opacity: .95;
 }
 
 .reset-button {
