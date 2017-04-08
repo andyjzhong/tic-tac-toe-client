@@ -6,7 +6,6 @@ let currentPlayer = 'O'
 
 // This alternates player turns.
 const currentTurn = function () {
-  console.log("It's " + currentPlayer + "'s turn now.")
   currentPlayer = currentPlayer === player1 ? player2 : player1
   return currentPlayer
 }
@@ -32,7 +31,6 @@ const gameCellIds = [
 
 // This adds an event listener every time a box is clicked, run the updateCell function.
 const setUpGameBoard = function () {
-  console.log('setUpGameBoard ran!')
   for (let i = 0; i < gameCellIds.length; i++) {
     const elementId = gameCellIds[i]
     const element = document.getElementById(elementId)
@@ -42,12 +40,9 @@ const setUpGameBoard = function () {
 
 // This logs an X or O into the gameBoard array.
 const updateCell = function () {
-  console.log(currentPlayer)
   const id = this.id
-  console.log('ID of clicked box = ' + id)
   // const index = index1[1]
   gameBoard[id] = currentPlayer
-  console.log('gameBoard', gameBoard)
   checkWinner()
 }
 
@@ -56,7 +51,6 @@ const clickHandler = () =>
 
 // Function for button to reset the game board.
 const clearBoard = function () {
-  console.log('Clearboard ran!')
 }
 
 const resetHandler = () =>
@@ -83,8 +77,6 @@ const xWinsRow = function () {
   if ((gameBoard[0] === 'X' && gameBoard[1] === 'X' && gameBoard[2] === 'X') ||
   (gameBoard[3] === 'X' && gameBoard[4] === 'X' && gameBoard[5] === 'X') ||
   (gameBoard[6] === 'X' && gameBoard[7] === 'X' && gameBoard[8] === 'X')) {
-    console.log('True')
-    console.log('X wins via Row!')
     return true
   }
 }
@@ -94,8 +86,6 @@ const xWinsCol = function () {
   if ((gameBoard[0] === 'X' && gameBoard[3] === 'X' && gameBoard[6] === 'X') ||
   (gameBoard[1] === 'X' && gameBoard[4] === 'X' && gameBoard[7] === 'X') ||
   (gameBoard[2] === 'X' && gameBoard[5] === 'X' && gameBoard[8] === 'X')) {
-    console.log('True')
-    console.log('X wins via Column!')
     return true
   }
 }
@@ -104,8 +94,6 @@ const xWinsDiag = function () {
 // This checks each of the rows to see if 3 cells in a DIAG are filled with X's.
   if ((gameBoard[0] === 'X' && gameBoard[4] === 'X' && gameBoard[8] === 'X') ||
   (gameBoard[2] === 'X' && gameBoard[4] === 'X' && gameBoard[6] === 'X')) {
-    console.log('True')
-    console.log('X wins via Diagonal!')
     return true
   }
 }
@@ -116,8 +104,6 @@ const oWinsRow = function () {
   if ((gameBoard[0] === 'O' && gameBoard[1] === 'O' && gameBoard[2] === 'O') ||
   (gameBoard[3] === 'O' && gameBoard[4] === 'O' && gameBoard[5] === 'O') ||
   (gameBoard[6] === 'O' && gameBoard[7] === 'O' && gameBoard[8] === 'O')) {
-    console.log('True')
-    console.log('O wins via Row!')
     return true
   }
 }
@@ -127,8 +113,6 @@ const oWinsCol = function () {
   if ((gameBoard[0] === 'O' && gameBoard[3] === 'O' && gameBoard[6] === 'O') ||
   (gameBoard[1] === 'O' && gameBoard[4] === 'O' && gameBoard[7] === 'O') ||
   (gameBoard[2] === 'O' && gameBoard[5] === 'O' && gameBoard[8] === 'O')) {
-    console.log('True')
-    console.log('O wins via Column!')
     return true
   }
 }
@@ -137,8 +121,6 @@ const oWinsDiag = function () {
 // This checks each of the rows to see if 3 cells in a DIAG are filled with O's.
   if ((gameBoard[0] === 'O' && gameBoard[4] === 'O' && gameBoard[8] === 'O') ||
   (gameBoard[2] === 'O' && gameBoard[4] === 'O' && gameBoard[6] === 'O')) {
-    console.log('True')
-    console.log('O wins via Diagonal!')
     return true
   }
 }
@@ -155,18 +137,22 @@ const oWins = function () {
 
 // Function to check if either X or O is a winner.
 const checkWinner = function () {
-  console.log('checkWinner ran!')
   if (xWins() === true) {
-    console.log('Executed X Banner')
-    $('.bannerId').text('Player X Wins!')
+    $('.banner-id').text('Player X Wins!')
     return 'X'
   }
-  if (oWins()) {
-    console.log('Executed O Banner')
-    $('.bannerId').text('Player O Wins!')
+  if (oWins() === true) {
+    $('.banner-id').text('Player O Wins!')
     return 'O'
   }
   return null
+}
+
+const checkDraw = function () {
+  console.log('Check Draw Ran!')
+  if (gameBoard.length === 9 && xWins() === false && oWins() === false) {
+    $('.banner-id').text("It's a Draw!")
+  }
 }
 
 module.exports = {
@@ -175,5 +161,6 @@ module.exports = {
   updateCell,
   clearBoard,
   resetHandler,
-  checkWinner
+  checkWinner,
+  checkDraw
 }
