@@ -85,6 +85,7 @@ const xWinsRow = function () {
   (gameBoard[6] === 'X' && gameBoard[7] === 'X' && gameBoard[8] === 'X')) {
     console.log('True')
     console.log('X wins via Row!')
+    return true
   }
 }
 
@@ -95,6 +96,7 @@ const xWinsCol = function () {
   (gameBoard[2] === 'X' && gameBoard[5] === 'X' && gameBoard[8] === 'X')) {
     console.log('True')
     console.log('X wins via Column!')
+    return true
   }
 }
 
@@ -104,6 +106,7 @@ const xWinsDiag = function () {
   (gameBoard[2] === 'X' && gameBoard[4] === 'X' && gameBoard[6] === 'X')) {
     console.log('True')
     console.log('X wins via Diagonal!')
+    return true
   }
 }
 
@@ -115,6 +118,7 @@ const oWinsRow = function () {
   (gameBoard[6] === 'O' && gameBoard[7] === 'O' && gameBoard[8] === 'O')) {
     console.log('True')
     console.log('O wins via Row!')
+    return true
   }
 }
 
@@ -125,6 +129,7 @@ const oWinsCol = function () {
   (gameBoard[2] === 'O' && gameBoard[5] === 'O' && gameBoard[8] === 'O')) {
     console.log('True')
     console.log('O wins via Column!')
+    return true
   }
 }
 
@@ -134,6 +139,7 @@ const oWinsDiag = function () {
   (gameBoard[2] === 'O' && gameBoard[4] === 'O' && gameBoard[6] === 'O')) {
     console.log('True')
     console.log('O wins via Diagonal!')
+    return true
   }
 }
 
@@ -150,10 +156,14 @@ const oWins = function () {
 // Function to check if either X or O is a winner.
 const checkWinner = function () {
   console.log('checkWinner ran!')
-  if (xWins()) {
+  if (xWins() === true) {
+    console.log('Executed X Banner')
+    $('.bannerId').text('Player X Wins!')
     return 'X'
   }
   if (oWins()) {
+    console.log('Executed O Banner')
+    $('.bannerId').text('Player O Wins!')
     return 'O'
   }
   return null
@@ -164,5 +174,6 @@ module.exports = {
   setUpGameBoard,
   updateCell,
   clearBoard,
-  resetHandler
+  resetHandler,
+  checkWinner
 }

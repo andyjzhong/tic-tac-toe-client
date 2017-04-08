@@ -44,12 +44,21 @@ const onChangePassword = function (event) {
     .catch(ui.changePasswordFailure)
 }
 
+const onCreateGame = function (event) {
+  const data = getFormFields(this)
+  event.preventDefault()
+  api.createGame(data)
+    .then(ui.createGameSuccess)
+    .catch(ui.createGameFailure)
+}
+
 // Creates an event handler to listen for when the submit button is clicked.
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
+  $('#createGame').on('click', onCreateGame)
 }
 
 // Exports out the addHandlers function.
