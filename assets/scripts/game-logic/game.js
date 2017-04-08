@@ -115,7 +115,6 @@ const oWinsRow = function () {
   (gameBoard[6] === 'O' && gameBoard[7] === 'O' && gameBoard[8] === 'O')) {
     console.log('True')
     console.log('O wins via Row!')
-    alert('O wins!')
   }
 }
 
