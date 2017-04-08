@@ -27,7 +27,7 @@
                 <span class="icon-bar"></span>
               </button>
 
-              <a href="" class="navbar-brand">General Assembly</a>
+              <a href="https://generalassemb.ly/" class="navbar-brand">General Assembly</a>
           </div><!-- End Navbar Header -->
           <!-- This makes a list of links appear in the navbar. The collapse class helps Bootstrap know how to handle them in order to be responsive. -->
           <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -65,7 +65,7 @@
           <div class="row">
             <div class="col-lg-4">
               <blockquote>
-                <p>"Failure is simply the opportunity to begin again, this time more intelligently.""</p>
+                <p>"Failure is simply the opportunity to begin again, this time more intelligently."</p>
                 <footer>Henry Ford</footer>
               </blockquote>
             </div> <!-- End Col 1 -->
@@ -93,34 +93,39 @@
           <div class="page-header" id="playnow">
             <h2>Play Now</h2>
           </div> <!-- End Page-header -->
-        <div class="gameboard">
-          <div class="row">
-            <div id="0" class="col-xs-4 left top box"></div>
-            <div id="1" class="col-xs-4 center top box"></div>
-            <div id="2" class="col-xs-4 right top box"></div>
+        <div class="gameboard text-center col-12 col-xs-12">
+          <div class="row text-center top-row">
+            <div id="0" class="col-xs-4 left top box">0</div>
+            <div id="1" class="col-xs-4 center top box">1</div>
+            <div id="2" class="col-xs-4 right top box">2</div>
           </div> <!-- End Row 1 -->
 
-          <div class="row">
-            <div id="3" class="col-xs-4 left mid box"></div>
-            <div id="4" class="col-xs-4 center mid box"></div>
-            <div id="5" class="col-xs-4 right mid box"></div>
+          <div class="row text-center mid-row">
+            <div id="3" class="col-xs-4 left mid box">3</div>
+            <div id="4" class="col-xs-4 center mid box">4</div>
+            <div id="5" class="col-xs-4 right mid box">5</div>
           </div> <!-- End Row 2 -->
 
-          <div class="row">
-            <div id="6" class="col-xs-4 left bot box"></div>
-            <div id="7" class="col-xs-4 center bot box"></div>
-            <div id="8" class="col-xs-4 right bot box"></div>
+          <div class="row text-center bot-row">
+            <div id="6" class="col-xs-4 left bot box">6</div>
+            <div id="7" class="col-xs-4 center bot box">7</div>
+            <div id="8" class="col-xs-4 right bot box">8</div>
           </div> <!-- End Row 3 -->
         </div> <!-- End Game Board -->
 
+        <div class="btn-group reset-button">
+          <!-- Creates a large green button -->
+          <a href="" class="btn btn-lg btn-success">Reset Game Board</a>
+        </div><!-- End Button -->
+      </div> <!-- End Play Now Container -->
 
 
 
 
 
       <!-- Creates a section for Sign Up -->
-      <section>
-        <div class="well">
+      <div class="well">
+        <section>
           <div class="container text-center">
             <h3>Signing Up is Easy!</h3>
             <p>Enter Your E-mail and Create a Password</p>
@@ -132,99 +137,62 @@
                 <input class="col-xs-4 text-center" type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" placeholder="Re-enter Your Password">
                 <input class="btn-xs btn-info" type="submit" name="submit" value="Create Account">
               </div> <!-- End Form Group -->
+            </form>
+          </div> <!-- End Well -->
+        </section>
+      </div> <!-- End Well Container -->
+
+              <!-- Creates a section for Sign Up -->
+              <div class="well">
+                <section>
+                  <div class="container text-center">
+                    <h3>Already Signed Up?</h3>
+                    <p>Login with your E-mail and Password</p>
+
+                    <form action="" class="form-inline" id="sign-up">
+                      <div class="form-group">
+                        <input class="col-xs-4 text-center" type="text" name="credentials[email]" id="sign-up-email" placeholder="Your Email Address">
+                        <input class="col-xs-4 text-center" type="password" name="credentials[password]" id="sign-up-password" placeholder="Create a Password">
+                        <input class="col-xs-4 text-center" type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" placeholder="Re-enter Your Password">
+                        <input class="btn-xs btn-info" type="submit" name="submit" value="Create Account">
+                      </div> <!-- End Form Group -->
+                    </form>
+                  </div>
+                  </section>
+                </div> <!-- End Well -->
+
+            <div class="forms-main">
+
+              <form id="sign-in">
+                <fieldset>
+                  <legend>Sign in</legend>
+                  <input type="text" name="credentials[email]" id="sign-in-email" placeholder="Your Email Address">
+                  <input type="password" name="credentials[password]" id="sign-in-password" placeholder="Your Password">
+                  <input type="submit" name="submit" value="Sign in!">
+                </fieldset>
+              </form>
+
+              <form id="sign-out">
+                <fieldset>
+                  <legend>Sign out</legend>
+                  <input type="submit" name="submit" value="Sign Out!">
+                </fieldset>
+              </form>
+
+              <form id="change-password">
+                <fieldset>
+                  <legend>Change Password</legend>
+                  <input type="password" name="passwords[old]" id="old-password" placeholder="Enter Old Password">
+                  <input type="password" name="passwords[new]" id="new-password" placeholder="Enter New Password">
+                  <input type="submit" name="submit" value="Change Password">
+                </fieldset>
+              </form>
+            </div>
+
           </div> <!-- End Container -->
-        </div> <!-- End Well -->
-      </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <div class="wrapper">
-        <aside>
-          <p>Area for Signing In</p>
-          <div class="forms-main">
-            <form id="sign-up">
-              <fieldset>
-                <legend>Sign up to Play!</legend>
-                <input type="text" name="credentials[email]" id="sign-up-email" placeholder="Your Email Address">
-                <input type="password" name="credentials[password]" id="sign-up-password" placeholder="Create a Password">
-                <input type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" placeholder="Re-enter Your Password">
-                <input type="submit" name="submit" value="Create Account">
-              </fieldset>
-            </form>
-
-            <form id="sign-in">
-              <fieldset>
-                <legend>Sign in</legend>
-                <input type="text" name="credentials[email]" id="sign-in-email" placeholder="Your Email Address">
-                <input type="password" name="credentials[password]" id="sign-in-password" placeholder="Your Password">
-                <input type="submit" name="submit" value="Sign in!">
-              </fieldset>
-            </form>
-
-            <form id="sign-out">
-              <fieldset>
-                <legend>Sign out</legend>
-                <input type="submit" name="submit" value="Sign Out!">
-              </fieldset>
-            </form>
-
-            <form id="change-password">
-              <fieldset>
-                <legend>Change Password</legend>
-                <input type="password" name="passwords[old]" id="old-password" placeholder="Enter Old Password">
-                <input type="password" name="passwords[new]" id="new-password" placeholder="Enter New Password">
-                <input type="submit" name="submit" value="Change Password">
-              </fieldset>
-            </form>
-          </div>
-        </aside>
-
-        <main>
-          <div id="message">Messages will go here</div>
-          <!-- This is for creating the actual gameboard -->
-          <div class="gameboard">
-            <div class="row">
-              <div id="0" class="col-xs-4 left top box"></div>
-              <div id="1" class="col-xs-4 center top box"></div>
-              <div id="2" class="col-xs-4 right top box"></div>
-            </div>
-
-            <div class="row">
-              <div id="3" class="col-xs-4 left mid box"></div>
-              <div id="4" class="col-xs-4 center mid box"></div>
-              <div id="5" class="col-xs-4 right mid box"></div>
-            </div>
-
-            <div class="row">
-              <div id="6" class="col-xs-4 left bot box"></div>
-              <div id="7" class="col-xs-4 center bot box"></div>
-              <div id="8" class="col-xs-4 right bot box"></div>
-            </div>
-          </div>
-
-          <form id="reset-board">
-            <fieldset>
-              <input type="submit" name="submit" value="Reset Board">
-            </fieldset>
-          </form>
-        </div>
-        </main>
-      </div>
+        </section>
+      </div> <!-- End Well -->
 
     </body>
-
-    <footer class="footer"> (C) andyjzhong </footer>
 
 </html>
