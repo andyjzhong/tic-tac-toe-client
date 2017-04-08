@@ -1,26 +1,26 @@
-.navbar {
+#my-navbar {
   background-color: $nav-background-color;
-  color: $nav-text-color;
-  position: fixed;
-  width: 100%;
-  margin: 0;
-  padding: 10px;
+  color: $navbar-text-color;
 }
 
-.navbar-text {
-
+.jumbotron {
+  background-color: $jumbotron-background-color;
 }
-
-/*
-.navbar.logo {
-  height: 10%;
-  width: 20%;
-}
-*/
 
 body {
   background-color: $page-background-color;
   font-family: 'Josefin Sans', sans-serif;
+}
+
+.form-group {
+  margin: 15px;
+}
+
+#sign-up-email,
+#sign-up-password,
+#sign-up-password-confirmation {
+  margin: 0px 10px;
+  width: 16em;
 }
 
 .forms-main {
@@ -54,7 +54,6 @@ main {
   height: 548px;
   margin: 20px auto;
   width: 60%;
-  font-size: 18px;
 }
 
 .row {
@@ -71,7 +70,9 @@ main {
   max-width: 200px;
   padding: 75px;
   text-align: center;
-  opacity: .7;
+  opacity: .3;
+  font-size: 150px;
+  text-align: center;
 }
 
 /*
