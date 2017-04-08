@@ -84,6 +84,7 @@ const xWinsRow = function () {
   (gameBoard[3] === 'X' && gameBoard[4] === 'X' && gameBoard[5] === 'X') ||
   (gameBoard[6] === 'X' && gameBoard[7] === 'X' && gameBoard[8] === 'X')) {
     console.log('True')
+    console.log('X wins via Row!')
   }
 }
 
@@ -93,6 +94,7 @@ const xWinsCol = function () {
   (gameBoard[1] === 'X' && gameBoard[4] === 'X' && gameBoard[7] === 'X') ||
   (gameBoard[2] === 'X' && gameBoard[5] === 'X' && gameBoard[8] === 'X')) {
     console.log('True')
+    console.log('X wins via Column!')
   }
 }
 
@@ -101,6 +103,38 @@ const xWinsDiag = function () {
   if ((gameBoard[0] === 'X' && gameBoard[4] === 'X' && gameBoard[8] === 'X') ||
   (gameBoard[2] === 'X' && gameBoard[4] === 'X' && gameBoard[6] === 'X')) {
     console.log('True')
+    console.log('X wins via Diagonal!')
+  }
+}
+
+// To see if O has won any of the rows.
+const oWinsRow = function () {
+// This checks each of the rows to see if 3 cells in a ROW are filled with O's.
+  if ((gameBoard[0] === 'O' && gameBoard[1] === 'O' && gameBoard[2] === 'O') ||
+  (gameBoard[3] === 'O' && gameBoard[4] === 'O' && gameBoard[5] === 'O') ||
+  (gameBoard[6] === 'O' && gameBoard[7] === 'O' && gameBoard[8] === 'O')) {
+    console.log('True')
+    console.log('O wins via Row!')
+    alert('O wins!')
+  }
+}
+
+const oWinsCol = function () {
+// This checks each of the rows to see if 3 cells in a COL are filled with O's.
+  if ((gameBoard[0] === 'O' && gameBoard[3] === 'O' && gameBoard[6] === 'O') ||
+  (gameBoard[1] === 'O' && gameBoard[4] === 'O' && gameBoard[7] === 'O') ||
+  (gameBoard[2] === 'O' && gameBoard[5] === 'O' && gameBoard[8] === 'O')) {
+    console.log('True')
+    console.log('O wins via Column!')
+  }
+}
+
+const oWinsDiag = function () {
+// This checks each of the rows to see if 3 cells in a DIAG are filled with O's.
+  if ((gameBoard[0] === 'O' && gameBoard[4] === 'O' && gameBoard[8] === 'O') ||
+  (gameBoard[2] === 'O' && gameBoard[4] === 'O' && gameBoard[6] === 'O')) {
+    console.log('True')
+    console.log('O wins via Diagonal!')
   }
 }
 
@@ -110,7 +144,9 @@ const xWins = function () {
 }
 
 // Requirements for O to win.
-const oWins = function () {}
+const oWins = function () {
+  return oWinsRow() || oWinsCol() || oWinsDiag()
+}
 
 // Function to check if either X or O is a winner.
 const checkWinner = function () {
