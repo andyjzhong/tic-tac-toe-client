@@ -40,10 +40,13 @@ const setUpGameBoard = function () {
 
 // This logs an X or O into the gameBoard array.
 const updateCell = function () {
+  console.log(gameBoard)
   const id = this.id
   // const index = index1[1]
   gameBoard[id] = currentPlayer
   checkWinner()
+  checkDraw()
+  turnCounter()
 }
 
 const clickHandler = () =>
@@ -67,6 +70,11 @@ const winCombos = [
   [0, 4, 8],
   [2, 4, 6]
 ]
+
+const turnCounter = function () {
+  const totalTurns = gameBoard.join('').length
+  return totalTurns
+}
 
 // Array to check win status. Build array during game.
 const gameBoard = new Array(9)
@@ -137,6 +145,7 @@ const oWins = function () {
 
 // Function to check if either X or O is a winner.
 const checkWinner = function () {
+  console.log('Check Winner Ran!')
   if (xWins() === true) {
     $('.banner-id').text('Player X Wins!')
     return 'X'
@@ -145,12 +154,11 @@ const checkWinner = function () {
     $('.banner-id').text('Player O Wins!')
     return 'O'
   }
-  return null
 }
-
+// Function to check if there is a Draw.
 const checkDraw = function () {
   console.log('Check Draw Ran!')
-  if (gameBoard.length === 9 && xWins() === false && oWins() === false) {
+  if (turnCounter() === 9) {
     $('.banner-id').text("It's a Draw!")
   }
 }
@@ -162,5 +170,6 @@ module.exports = {
   clearBoard,
   resetHandler,
   checkWinner,
-  checkDraw
+  checkDraw,
+  turnCounter
 }

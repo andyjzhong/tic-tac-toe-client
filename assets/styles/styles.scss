@@ -10,8 +10,8 @@
 }
 
 body {
-  background-image: url('../images/paint.jpg');
   background-attachment: fixed;
+  background-image: url('../images/paint.jpg');
   font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -22,14 +22,20 @@ body {
 #sign-up-email,
 #sign-up-password,
 #sign-up-password-confirmation {
-  margin: 0px 10px;
+  margin: 0 10px;
   width: 16em;
 }
 
+#sign-in,
+#sign-out,
+#change-password {
+  margin: 20px;
+}
+
 .forms-main {
+  background-color: $forms-background-color;
   margin: 100px 20px auto;
   padding: 10px;
-  background-color: $forms-background-color;
 }
 
 h1 {
@@ -48,12 +54,15 @@ h4 {
 }
 
 .well {
-  max-width: 90%;
   margin: auto;
+  max-width: 80%;
 }
 
 .banner-id {
-  font-size: 25px;
+  margin-top: 30px;
+  font-size: 40px;
+  color: $lightblue;
+  font-weight: bold;
 }
 
 .gameboard {
@@ -61,12 +70,12 @@ h4 {
 }
 
 .row {
-  width: 100%;
   margin: auto;
+  width: 100%;
 }
 
 .top-row {
-  margin-top: 60px;
+  margin-top: 40px;
   max-height: 50em;
   max-width: 50em;
 }
@@ -85,8 +94,8 @@ h4 {
 .box {
   background-color: $board-background-color;
   border: 2px solid $board-border-color;
-  font-size: 160px;
   color: $black;
+  font-size: 160px;
   height: 15em;
   max-height: 200px;
   opacity: .95;
