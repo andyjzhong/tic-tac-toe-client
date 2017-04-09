@@ -16,7 +16,7 @@ const start = function () {
   $(this).unbind()
 }
 
-// Creates the cell IDs.
+// Creates the cell Ids array.
 const gameCellIds = [
   '0',
   '1',
@@ -29,7 +29,7 @@ const gameCellIds = [
   '8'
 ]
 
-// This adds an event listener every time a box is clicked, run the updateCell function.
+// Retrieves the This adds an event listener every time a box is clicked, run the updateCell function.
 const setUpGameBoard = function () {
   for (let i = 0; i < gameCellIds.length; i++) {
     const elementId = gameCellIds[i]
