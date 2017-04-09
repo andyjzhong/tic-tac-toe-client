@@ -161,7 +161,10 @@ const clickHandler = () =>
 
 // Function for button to reset the game board.
 const clearBoard = function () {
-  console.log(gameBoard[0], gameBoard[1], gameBoard[2], gameBoard[3], gameBoard[4], gameBoard[5], gameBoard[6], gameBoard[7], gameBoard[8])
+  console.log('clearBoard ran!')
+  // Need a function to go and clear out an array
+  // This currently just replaces all the text in the box. Does not allow user to re-click.
+  $('.box').text('')
 }
 
 const resetHandler = () =>
