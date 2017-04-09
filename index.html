@@ -36,9 +36,9 @@
           <div class="collapse navbar-collapse" id="navbar-collapse">
 
             <ul class="nav navbar-nav navlinks">
-              <li><a href="#playnow">Play Now</a></li>
-              <li><a href="#gallery">Gallery</a></li>
               <li><a href="#inspiration">Inspiration</a></li>
+              <li><a href="#playnow">Play Now</a></li>
+              <li><a href="#signUpNow">Sign Up</a></li>
               <li><a href="#contact-info">Contact Info</a></li>
             </ul>
           </div><!-- End Navbar Collapser -->
@@ -53,7 +53,7 @@
 
           <div class="btn-group">
             <!-- Creates a large orange button -->
-            <a href="" class="btn btn-lg btn-warning">Sign Up to Play Free</a>
+            <a href="#signUpNow" class="btn btn-lg btn-warning">Sign Up to Play Free</a>
           </div><!-- End Button -->
         </div><!-- End Jumbotron Container -->
       </div><!-- End Jumbotron -->
@@ -120,10 +120,10 @@
           </div> <!-- End Row 3 -->
         </div> <!-- End Game Board -->
 
-        <div class="btn-group reset-button">
-          <!-- Creates a large green button -->
-          <a href="" id="createGame" class="btn btn-lg btn-success">Reset Game Board</a>
-        </div><!-- End Button -->
+        <form id="clearBoard">
+          <input type="submit" name="submit" value="Clear Board!">
+        </form>
+        <div id="clearBoard" class="btn btn-lg btn-success">Reset Game Board</div> <!-- End Button -->
       </div> <!-- End Play Now Container -->
       <br>
 
@@ -131,7 +131,7 @@
 
 
       <!-- Creates a section for Sign Up -->
-      <div class="well block">
+      <div class="well block" id=signUpNow>
         <section>
           <div class="container text-center">
             <h3>Signing Up is Easy!</h3>

@@ -47,17 +47,10 @@ const updateCell = function () {
   checkWinner()
   checkDraw()
   turnCounter()
+  if (xWins() === true || oWins() === true) {
+    return
+  }
 }
-
-const clickHandler = () =>
-  $('.box').on('click', start)
-
-// Function for button to reset the game board.
-const clearBoard = function () {
-}
-
-const resetHandler = () =>
-  $('#reset-board').on('click', clearBoard)
 
 // This lists out all the possible winning combinations.
 const winCombos = [
@@ -77,7 +70,7 @@ const turnCounter = function () {
 }
 
 // Array to check win status. Build array during game.
-const gameBoard = new Array(9)
+let gameBoard = new Array(9)
 
 // To see if X has won any of the rows.
 const xWinsRow = function () {
@@ -162,6 +155,17 @@ const checkDraw = function () {
     $('.banner-id').text("It's a Draw!")
   }
 }
+
+const clickHandler = () =>
+  $('.box').on('click', start)
+
+// Function for button to reset the game board.
+const clearBoard = function () {
+  console.log(gameBoard[0], gameBoard[1], gameBoard[2], gameBoard[3], gameBoard[4], gameBoard[5], gameBoard[6], gameBoard[7], gameBoard[8])
+}
+
+const resetHandler = () =>
+  $('#reset-board').on('click', clearBoard)
 
 module.exports = {
   clickHandler,

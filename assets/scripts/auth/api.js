@@ -61,6 +61,5 @@ module.exports = {
   signUp,
   signIn,
   signOut,
-  changePassword,
-  createGame
+  changePassword
 }

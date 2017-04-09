@@ -7,6 +7,8 @@ const getFormFields = require(`../../../lib/get-form-fields`)
 const api = require('./api')
 // Goes and gets the info from the ui.js file.
 const ui = require('./ui')
+// Goes and gets the info from the ui.js file.
+const game = require('/Users/andy/wdi/projects/tic-tac-toe-client/assets/scripts/game-logic/game.js')
 
 // This is the signup function that dictates success or fail. It also prevents it from defaulting to refreshing the page.
 const onSignUp = function (event) {
@@ -44,12 +46,10 @@ const onChangePassword = function (event) {
     .catch(ui.changePasswordFailure)
 }
 
-const onCreateGame = function (event) {
-  const data = getFormFields(this)
+const clearBoard = function (event) {
+  console.log('Clear Board ran!')
   event.preventDefault()
-  api.createGame(data)
-    .then(ui.createGameSuccess)
-    .catch(ui.createGameFailure)
+  game.clearBoard()
 }
 
 // Creates an event handler to listen for when the submit button is clicked.
@@ -58,7 +58,7 @@ const addHandlers = () => {
   $('#sign-in').on('submit', onSignIn)
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
-  $('#createGame').on('click', onCreateGame)
+  $('#clearBoard').on('click', clearBoard)
 }
 
 // Exports out the addHandlers function.
