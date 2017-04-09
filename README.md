@@ -26,11 +26,11 @@ Below are the high level goals of the game project:
 My approach for developing a Tic-Tac-Toe game started with reading the Game Project Requirements. Once I had a good understanding of the scope of the project, I made my first attempt at creating my first Single-Page Application (SPA).
 
 *	I began by envisioning what a completed Tic-Tac-Toe SPA would look like and designed a basic wireframe by hand. Some specific features include:
-** Functional Game Board
-** Forms for Sign-Up/Sign-in w/ buttons
-** Navbar w/ links
+  - Functional Game Board
+  - Forms for Sign-Up/Sign-in w/ buttons
+  - Navbar w/ links
 
-(http://imgur.com/a/kskJh)
+URL to Wireframe: http://imgur.com/a/kskJh
 
 *	Next, I devised user stories to help guide how I would build out the functionality. Below is a list of user stories I developed at the start of the project.
 
@@ -58,7 +58,7 @@ Developing an SPA after only about 2-3 weeks of formal training definitely prese
 
 *	My second challenge was figuring out how to determine a game winner. This was particularly frustrating because I spent the most time on the game logic due to my tendency to thrash and want to exhaust every resource I had until I reach out for help. It was also during this time that I realized how developers find drastically different ways to accomplish the same goal.
 
-** Although this was my biggest challenge, it also became my biggest victory that got me back into the developer frame of mind. Jordan was able to help me focus on breaking down my issue to the most immediate concern.
+  - Although this was my biggest challenge, it also became my biggest victory that got me back into the developer frame of mind. Jordan was able to help me focus on breaking down my issue to the most immediate concern.
 
 *	My next challenge was figuring out how to log whether or not the player has won onto the SPA. This took a bit of time too, but I once again got some help from a fellow developer and was able to create a function where if the conditions of a win are met by a certain player, reference an object and replace its text with ‘X/O is the Winner!’
 
@@ -81,7 +81,7 @@ Below is a list of unresolved issues that I would like to address for upcoming v
 Version 1.0 – Game Project Launch
 *	Initial Tic-Tac-Toe SPA for Presentation
 
-Future Versions –
+Future Versions – TBD
 
 
 ## [License](LICENSE)
