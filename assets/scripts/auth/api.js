@@ -44,12 +44,12 @@ const changePassword = (data) => {
   })
 }
 
-// Creates the Ajax function to POST data for Signing up.
+// Creates the Ajax function to POST data for new game!
 const createGame = (data) => {
+  console.log('createGame from api.js ran!')
   return $.ajax({
-    url: config.apiOrigin + '/game/',
+    url: config.apiOrigin + '/games/',
     method: 'POST',
-    data: data,
     headers: {
       Authorization: 'Token token=' + store.user.token
     }
@@ -61,5 +61,6 @@ module.exports = {
   signUp,
   signIn,
   signOut,
-  changePassword
+  changePassword,
+  createGame
 }

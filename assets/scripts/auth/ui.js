@@ -39,7 +39,7 @@ const changePasswordFailure = (error) => {
 }
 
 const createGameSuccess = (data) => {
-  console.log(data)
+  console.log('createGameSuccess from ui.js ran!')
 }
 
 const createGameFailure = (error) => {

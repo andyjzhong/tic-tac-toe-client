@@ -52,6 +52,15 @@ const clearBoard = function (event) {
   game.clearBoard()
 }
 
+// Trying to create a new game.
+const onCreateGame = function (event) {
+  event.preventDefault()
+  console.log('onCreateGame from events.js ran!')
+  api.createGame()
+    .then(ui.onNoContentSuccess)
+    .catch(ui.onError)
+}
+
 // Creates an event handler to listen for when the submit button is clicked.
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
@@ -59,6 +68,7 @@ const addHandlers = () => {
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
   $('#clearBoard').on('click', clearBoard)
+  $('#createGame').on('click', onCreateGame)
 }
 
 // Exports out the addHandlers function.
