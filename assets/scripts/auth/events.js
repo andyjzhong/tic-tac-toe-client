@@ -57,8 +57,8 @@ const onCreateGame = function (event) {
   event.preventDefault()
   console.log('onCreateGame from events.js ran!')
   api.createGame()
-    .then(ui.onNoContentSuccess)
-    .catch(ui.onError)
+    .then(ui.createGameSuccess)
+    .catch(ui.createGameFailure)
 }
 
 // Creates an event handler to listen for when the submit button is clicked.
