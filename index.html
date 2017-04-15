@@ -60,27 +60,11 @@
 
       <!-- This is for creating a section to include some blockquotes -->
       <div class="container text-center block">
-        <div class="page-header" id="">
+        <div class="page-header">
           <h2>User Account Management</h2>
         </div> <!-- End Page-header -->
 
-        <div class="account-banner">This will Let you know your account status!</div> <!-- End Banner -->
-
-          <div class="row">
-            <div id="signUpForm">
-              <h3>Signing Up is Easy!</h3>
-              <p>Enter Your E-mail and Create a Password</p>
-              <form action="" class="form-inline" id="sign-up">
-                <div class="form-group">
-                  <input class="col-lg-4 text-center" type="text" name="credentials[email]" id="sign-up-email" placeholder="Your Email Address">
-                  <input class="col-lg-4 text-center" type="password" name="credentials[password]" id="sign-up-password" placeholder="Create a Password">
-                  <input class="col-lg-4 text-center" type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" placeholder="Re-enter Your Password">
-                  <br>
-                  <input class="btn-sm btn-info" type="submit" name="submit" value="Create Account">
-                </div> <!-- End Form Group -->
-              </form>
-            </div> <!-- End Sign-Up Form-->
-          </div> <!-- End Sign-Up Row -->
+        <div class="account-banner">Please Sign In or Create an Account</div> <!-- End Banner -->
 
             <div class="row">
               <div id="signInForm">
@@ -99,9 +83,23 @@
             </div> <!-- End Sign-In Row-->
 
             <div class="row">
-              <div id="signOutForm">
-                <h3>Done Playing?</h3>
-                <p>Sign Out</p>
+              <div id="signUpForm">
+                <h3>Signing Up is Easy!</h3>
+                <p>Enter Your E-mail and Create a Password</p>
+                <form action="" class="form-inline" id="sign-up">
+                  <div class="form-group">
+                    <input class="col-lg-4 text-center" type="text" name="credentials[email]" id="sign-up-email" placeholder="Your Email Address">
+                    <input class="col-lg-4 text-center" type="password" name="credentials[password]" id="sign-up-password" placeholder="Create a Password">
+                    <input class="col-lg-4 text-center" type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" placeholder="Re-enter Your Password">
+                    <br>
+                    <input class="btn-sm btn-info" type="submit" name="submit" value="Create Account">
+                  </div> <!-- End Form Group -->
+                </form>
+              </div> <!-- End Sign-Up Form-->
+            </div> <!-- End Sign-Up Row -->
+
+            <div class="row">
+              <div class="col-lg-6" id="signOutForm">
                 <form id="sign-out">
                   <fieldset>
                     <legend>Sign out</legend>
@@ -110,22 +108,19 @@
                   </fieldset>
                 </form>
               </div> <!-- End Sign-Out Form-->
-            </div> <!-- End Sign-Out Row -->
 
-          <div class="row">
-            <form id="change-passwordForm">
-              <h3>Wanna Change Password?</h3>
-              <p>Enter a New Password Below</p>
+            <div class="col-lg-6" id="changePasswordForm">
+            <form id="change-password">
               <fieldset>
                 <legend>Change Password</legend>
                 <input type="password" name="passwords[old]" id="old-password" placeholder="Enter Old Password">
                 <input type="password" name="passwords[new]" id="new-password" placeholder="Enter New Password">
-                <input class="btn-xs btn-warning" type="submit" name="submit" value="Change Password">
+                <input class="btn-sm btn-warning" type="submit" name="submit" value="Change Password">
               </fieldset>
             </form>
           </div> <!-- End Change PW Form-->
-
       </div> <!-- End Row -->
+    </div> <!-- End Container -->
     <br>
 
       <div class="container text-center block">
@@ -157,7 +152,7 @@
         </div> <!-- End Game Board -->
 
         <form id="clearBoard">
-          <input class="btn btn-lg btn-success reset-button" type="submit" name="submit" value="Reset Game Board">
+          <input class="btn-lg btn-success reset-button" type="submit" name="submit" value="Reset Game Board">
         </form>
 
         <form id="createGame">
