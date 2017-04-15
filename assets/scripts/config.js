@@ -1,5 +1,5 @@
 'use strict'
-/*
+
 // Production
 const config = {
   apiOrigins: {
@@ -8,8 +8,8 @@ const config = {
 }
 
 module.exports = config
-*/
 
+/*
 // Dev
 const config = {
   apiOrigins: {
@@ -18,3 +18,4 @@ const config = {
 }
 
 module.exports = config
+*/
