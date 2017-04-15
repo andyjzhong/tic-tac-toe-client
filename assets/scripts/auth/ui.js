@@ -11,8 +11,10 @@ const signUpFailure = (error) => {
 }
 
 const signInSuccess = (data) => {
-  console.log('signIn success ran. data is :', data)
+  console.log('AZ: signInSuccess from UI ran. Data contains :', data)
   store.user = data.user
+  $('#sign-out, #change-password').show()
+  $('#sign-up, #sign-in').hide()
 }
 
 const signInFailure = (error) => {

@@ -60,36 +60,72 @@
 
       <!-- This is for creating a section to include some blockquotes -->
       <div class="container text-center block">
-        <section>
-          <div class="page-header" id="inspiration">
-            <h2>Inspiration</h2>
-          </div> <!-- End Page-header -->
+        <div class="page-header" id="">
+          <h2>User Account Management</h2>
+        </div> <!-- End Page-header -->
+
+        <div class="account-banner">This will Let you know your account status!</div> <!-- End Banner -->
 
           <div class="row">
-            <div class="col-lg-4">
-              <blockquote>
-                <p>"Failure is simply the opportunity to begin again, this time more intelligently."</p>
-                <footer>Henry Ford</footer>
-              </blockquote>
-            </div> <!-- End Col 1 -->
+            <div id="signUpForm">
+              <h3>Signing Up is Easy!</h3>
+              <p>Enter Your E-mail and Create a Password</p>
+              <form action="" class="form-inline" id="sign-up">
+                <div class="form-group">
+                  <input class="col-lg-4 text-center" type="text" name="credentials[email]" id="sign-up-email" placeholder="Your Email Address">
+                  <input class="col-lg-4 text-center" type="password" name="credentials[password]" id="sign-up-password" placeholder="Create a Password">
+                  <input class="col-lg-4 text-center" type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" placeholder="Re-enter Your Password">
+                  <br>
+                  <input class="btn-sm btn-info" type="submit" name="submit" value="Create Account">
+                </div> <!-- End Form Group -->
+              </form>
+            </div> <!-- End Sign-Up Form-->
+          </div> <!-- End Sign-Up Row -->
 
-            <div class="col-lg-4">
-              <blockquote>
-                <p>"There is no better than adversity. Every defeat, every heartbreak, every loss, contains its own seed, its own lesson on how to improve your performance next time."</p>
-                <footer>Malcolm X</footer>
-              </blockquote>
-            </div> <!-- End Col 2 -->
+            <div class="row">
+              <div id="signInForm">
+                <h3>Already Signed Up?</h3>
+                <p>Login with your E-mail and Password</p>
+                <form id="sign-in">
+                  <fieldset>
+                    <legend>Sign in</legend>
+                    <input type="text" name="credentials[email]" id="sign-in-email" placeholder="Your Email Address">
+                    <input type="password" name="credentials[password]" id="sign-in-password" placeholder="Your Password">
+                    <br>
+                    <input class="btn-sm btn-info" type="submit" name="submit" value="Sign in!">
+                  </fieldset>
+                </form>
+              </div> <!-- End Sign-In Form-->
+            </div> <!-- End Sign-In Row-->
 
-            <div class="col-lg-4">
-              <blockquote>
-                <p>“Success is not final, failure is not fatal: it is the courage to continue that counts.”</p>
-                <footer>Winston Churchill</footer>
-              </blockquote>
-            </div> <!-- End Col 3 -->
+            <div class="row">
+              <div id="signOutForm">
+                <h3>Done Playing?</h3>
+                <p>Sign Out</p>
+                <form id="sign-out">
+                  <fieldset>
+                    <legend>Sign out</legend>
+                    <br>
+                    <input class="btn-sm btn-warning" type="submit" name="submit" value="Sign Out!">
+                  </fieldset>
+                </form>
+              </div> <!-- End Sign-Out Form-->
+            </div> <!-- End Sign-Out Row -->
 
-          </div> <!-- End Row -->
-        </section> <!-- End Page section -->
-      </div> <!-- End Inspiration Container -->
+          <div class="row">
+            <form id="change-passwordForm">
+              <h3>Wanna Change Password?</h3>
+              <p>Enter a New Password Below</p>
+              <fieldset>
+                <legend>Change Password</legend>
+                <input type="password" name="passwords[old]" id="old-password" placeholder="Enter Old Password">
+                <input type="password" name="passwords[new]" id="new-password" placeholder="Enter New Password">
+                <input class="btn-xs btn-warning" type="submit" name="submit" value="Change Password">
+              </fieldset>
+            </form>
+          </div> <!-- End Change PW Form-->
+
+      </div> <!-- End Row -->
     <br>
 
       <div class="container text-center block">
@@ -131,65 +167,39 @@
       </div> <!-- End Play Now Container -->
       <br>
 
-
-
-
-      <!-- Creates a section for Sign Up -->
-      <div class="well block" id=signUpNow>
+      <!-- This is for creating a section to include some blockquotes -->
+      <div class="container text-center block">
         <section>
-          <div class="container text-center">
-            <h3>Signing Up is Easy!</h3>
-            <p>Enter Your E-mail and Create a Password</p>
+          <div class="page-header" id="inspiration">
+            <h2>Inspiration</h2>
+          </div> <!-- End Page-header -->
 
-            <form action="" class="form-inline" id="sign-up">
-              <div class="form-group">
-                <input class="col-xs-4 text-center" type="text" name="credentials[email]" id="sign-up-email" placeholder="Your Email Address">
-                <input class="col-xs-4 text-center" type="password" name="credentials[password]" id="sign-up-password" placeholder="Create a Password">
-                <input class="col-xs-4 text-center" type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" placeholder="Re-enter Your Password">
-                <input class="btn-xs btn-info" type="submit" name="submit" value="Create Account">
-              </div> <!-- End Form Group -->
-            </form>
-          </div> <!-- End Well -->
-        </section>
-      </div> <!-- End Well Container -->
-      <br>
+          <div class="row">
+            <div class="col-lg-4">
+              <blockquote>
+                <p>"Failure is simply the opportunity to begin again, this time more intelligently."</p>
+                <footer>Henry Ford</footer>
+              </blockquote>
+            </div> <!-- End Col 1 -->
 
-      <!-- Creates a section for Sign Up -->
-      <div class="well block">
-        <section>
-          <div class="container text-center">
-            <h3>Already Signed Up?</h3>
-            <p>Login with your E-mail and Password</p>
+            <div class="col-lg-4">
+              <blockquote>
+                <p>"There is no better than adversity. Every defeat, every heartbreak, every loss, contains its own seed, its own lesson on how to improve your performance next time."</p>
+                <footer>Malcolm X</footer>
+              </blockquote>
+            </div> <!-- End Col 2 -->
 
-            <form id="sign-in">
-              <fieldset>
-                <legend>Sign in</legend>
-                <input type="text" name="credentials[email]" id="sign-in-email" placeholder="Your Email Address">
-                <input type="password" name="credentials[password]" id="sign-in-password" placeholder="Your Password">
-                <input class="btn-xs btn-info" type="submit" name="submit" value="Sign in!">
-              </fieldset>
-            </form>
+            <div class="col-lg-4">
+              <blockquote>
+                <p>“Success is not final, failure is not fatal: it is the courage to continue that counts.”</p>
+                <footer>Winston Churchill</footer>
+              </blockquote>
+            </div> <!-- End Col 3 -->
 
-            <form id="sign-out">
-              <fieldset>
-                <legend>Sign out</legend>
-                <input class="btn-xs btn-warning" type="submit" name="submit" value="Sign Out!">
-              </fieldset>
-            </form>
-
-            <form id="change-password">
-              <fieldset>
-                <legend>Change Password</legend>
-                <input type="password" name="passwords[old]" id="old-password" placeholder="Enter Old Password">
-                <input type="password" name="passwords[new]" id="new-password" placeholder="Enter New Password">
-                <input class="btn-xs btn-warning" type="submit" name="submit" value="Change Password">
-              </fieldset>
-            </form>
-
-          </div>
-        </section>
-      </div> <!-- End Well -->
-      <br>
+          </div> <!-- End Row -->
+        </section> <!-- End Page section -->
+      </div> <!-- End Inspiration Container -->
+    <br>
 
     </body>
 
