@@ -16,7 +16,7 @@ const signUpFailure = (error) => {
 const signInSuccess = (data) => {
   console.log('AZ: signInSuccess from UI ran. Data contains :', data)
   store.user = data.user
-  $('#signOutForm, #changePasswordForm').show()
+  $('#signOutForm, #changePasswordForm, #gameArea').show()
   $('#signUpForm, #signInForm').hide()
   $('.account-banner').text('You have successfully logged in.')
 }
@@ -32,7 +32,7 @@ const signOutSuccess = (data) => {
   store.user = null
   console.log('store is: ', store)
   $('#signInForm, #signUpForm').show()
-  $('#signOutForm, #changePasswordForm').hide()
+  $('#signOutForm, #changePasswordForm, #gameArea').hide()
   $('.account-banner').text('You have successfully logged out.')
 }
 
