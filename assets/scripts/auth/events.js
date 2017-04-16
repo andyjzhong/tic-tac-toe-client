@@ -61,6 +61,17 @@ const onCreateGame = function (event) {
     .catch(ui.createGameFailure)
 }
 
+// Trying to update a game.
+const onUpdateGame = function (event) {
+  event.preventDefault()
+  console.log('AZ: onUpdateGame from events.js ran!')
+  const data = getFormFields(event.target)
+  console.log(data)
+  api.updateGame(data)
+    .then(ui.updateGameSuccess)
+    .catch(ui.updateGameFailure)
+}
+
 // Creates an event handler to listen for when the submit button is clicked.
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
@@ -69,6 +80,7 @@ const addHandlers = () => {
   $('#change-password').on('submit', onChangePassword)
   $('#clearBoard').on('click', clearBoard)
   $('#createGame').on('click', onCreateGame)
+  $('#updateGame').on('click', onUpdateGame)
 }
 
 // Exports out the addHandlers function.

@@ -59,6 +59,16 @@ const createGameFailure = (error) => {
   console.error(error)
 }
 
+const updateGameSuccess = (id) => {
+  console.log('AZ: updateGameSuccess from ui.js ran!')
+  console.log(id)
+  store.games = id.games
+}
+
+const updateGameFailure = (error) => {
+  console.error(error)
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -69,5 +79,7 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   createGameSuccess,
-  createGameFailure
+  createGameFailure,
+  updateGameSuccess,
+  updateGameFailure
 }
