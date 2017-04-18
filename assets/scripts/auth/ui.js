@@ -52,7 +52,7 @@ const changePasswordFailure = (error) => {
 const createGameSuccess = (data) => {
   console.log('createGameSuccess from ui.js ran!')
   console.log(data)
-  store.games = data.games
+  store.game = data.game
 }
 
 const createGameFailure = (error) => {
@@ -62,7 +62,7 @@ const createGameFailure = (error) => {
 const updateGameSuccess = (id) => {
   console.log('AZ: updateGameSuccess from ui.js ran!')
   console.log(id)
-  store.games = id.games
+//  store.games = id.games
 }
 
 const updateGameFailure = (error) => {

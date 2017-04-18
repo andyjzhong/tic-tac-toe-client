@@ -65,9 +65,9 @@ const onCreateGame = function (event) {
 const onUpdateGame = function (event) {
   event.preventDefault()
   console.log('AZ: onUpdateGame from events.js ran!')
-  const data = getFormFields(event.target)
-  console.log(data)
-  api.updateGame(data)
+  const id = getFormFields(event.target)
+  console.log(id)
+  api.updateGame(id)
     .then(ui.updateGameSuccess)
     .catch(ui.updateGameFailure)
 }
@@ -81,6 +81,7 @@ const addHandlers = () => {
   $('#clearBoard').on('click', clearBoard)
   $('#createGame').on('click', onCreateGame)
   $('#updateGame').on('click', onUpdateGame)
+  $('#game_info').on('submit', onUpdateGame)
 }
 
 // Exports out the addHandlers function.

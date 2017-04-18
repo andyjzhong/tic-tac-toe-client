@@ -7,6 +7,8 @@ let currentPlayer = 'O'
 // This alternates player turns.
 const currentTurn = function () {
   currentPlayer = currentPlayer === player1 ? player2 : player1
+  $('#move_marker_form').val(currentPlayer)
+  $('#index_form').val(+$(this).attr('id'))
   return currentPlayer
 }
 
@@ -50,7 +52,10 @@ const updateCell = function () {
   checkWinner()
   checkDraw()
   turnCounter()
+  console.log('weeeeeeeeeeee')
+  $('#game_info').submit()
   if (xWins() === true || oWins() === true) {
+    $('.box').off()
     return
   }
 }
@@ -144,18 +149,21 @@ const checkWinner = function () {
   console.log('Check Winner Ran!')
   if (xWins() === true) {
     $('.banner-id').text('Player X Wins!')
+    $('#game_over_form').val('true')
     return 'X'
   }
   if (oWins() === true) {
     $('.banner-id').text('Player O Wins!')
+    $('#game_over_form').val('true')
     return 'O'
   }
 }
 // Function to check if there is a Draw.
 const checkDraw = function () {
   console.log('Check Draw Ran!')
-  if (turnCounter() === 9) {
+  if (turnCounter() === 9 && $('#game_over_form').val() === 'false') {
     $('.banner-id').text("It's a Draw!")
+    $('#game_over_form').val('true')
   }
 }
 

@@ -57,16 +57,17 @@ const createGame = (data) => {
 }
 
 // Creates the Ajax function to PATCHES data into a game id!
-const updateGame = (id) => {
+const updateGame = (data) => {
   console.log('AZ: updateGame from api.js ran!')
-  console.log(id)
+  console.log('Your id is:' + data)
+  console.log(store)
   return $.ajax({
     url: config.apiOrigin + '/games/' + store.game.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data: data
+    data
   })
 }
 
