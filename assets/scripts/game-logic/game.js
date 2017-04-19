@@ -34,8 +34,8 @@ const gameCellIds = [
 // Retrieves the This adds an event listener every time a box is clicked, run the updateCell function.
 const setUpGameBoard = function () {
   console.log('AZ: Initialized Gameboard')
-  $('#signUpForm, #signInForm, #signOutForm, #changePasswordForm, #gameArea').show()
-  $('#signOutForm, #changePasswordForm, #gameArea').hide()
+  $('#signUpForm, #signInForm, #signOutForm, #changePasswordForm, #game_info, #createGame, #gameArea').show()
+  $('#signOutForm, #changePasswordForm, #game_info, #createGame, #gameArea').hide()
   for (let i = 0; i < gameCellIds.length; i++) {
     const elementId = gameCellIds[i]
     const element = document.getElementById(elementId)
@@ -52,7 +52,6 @@ const updateCell = function () {
   checkWinner()
   checkDraw()
   turnCounter()
-  console.log('weeeeeeeeeeee')
   $('#game_info').submit()
   if (xWins() === true || oWins() === true) {
     $('.box').off()

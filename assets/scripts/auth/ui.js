@@ -1,5 +1,8 @@
 'use strict'
 
+const authEvents = require('./events.js')
+const authGame = require('../game-logic/game.js')
+
 const store = require('../store')
 
 const signUpSuccess = (data) => {
@@ -16,7 +19,7 @@ const signUpFailure = (error) => {
 const signInSuccess = (data) => {
   console.log('AZ: signInSuccess from UI ran. Data contains :', data)
   store.user = data.user
-  $('#signOutForm, #changePasswordForm').show()
+  $('#signOutForm, #changePasswordForm, #createGame').show()
   $('#signUpForm, #signInForm').hide()
   $('.account-banner').text('You have successfully logged in.')
 }
@@ -32,7 +35,7 @@ const signOutSuccess = (data) => {
   store.user = null
   console.log('store is: ', store)
   $('#signInForm, #signUpForm').show()
-  $('#signOutForm, #changePasswordForm, #gameArea').hide()
+  $('#signOutForm, #changePasswordForm, #createGame, #gameArea').hide()
   $('.account-banner').text('You have successfully logged out.')
 }
 
@@ -51,7 +54,9 @@ const changePasswordFailure = (error) => {
 
 const createGameSuccess = (data) => {
   console.log('createGameSuccess from ui.js ran!')
+  $('.box').text('')
   $('#gameArea').show()
+  $('.banner-id').text("Let's Play!")
   console.log(data)
   store.game = data.game
 }
