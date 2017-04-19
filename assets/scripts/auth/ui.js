@@ -16,7 +16,7 @@ const signUpFailure = (error) => {
 const signInSuccess = (data) => {
   console.log('AZ: signInSuccess from UI ran. Data contains :', data)
   store.user = data.user
-  $('#signOutForm, #changePasswordForm, #gameArea').show()
+  $('#signOutForm, #changePasswordForm').show()
   $('#signUpForm, #signInForm').hide()
   $('.account-banner').text('You have successfully logged in.')
 }
@@ -51,6 +51,7 @@ const changePasswordFailure = (error) => {
 
 const createGameSuccess = (data) => {
   console.log('createGameSuccess from ui.js ran!')
+  $('#gameArea').show()
   console.log(data)
   store.game = data.game
 }
