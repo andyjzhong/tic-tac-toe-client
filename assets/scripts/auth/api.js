@@ -71,6 +71,18 @@ const updateGame = (data) => {
   })
 }
 
+// Creates the Ajax function to POST data for new game!
+const getGame = (id) => {
+  console.log('AZ: getGame from api.js ran!')
+  return $.ajax({
+    url: config.apiOrigin + '/games/' + id,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 // Exports out the signUp Ajax function.
 module.exports = {
   signUp,
@@ -78,5 +90,6 @@ module.exports = {
   signOut,
   changePassword,
   createGame,
-  updateGame
+  updateGame,
+  getGame
 }
