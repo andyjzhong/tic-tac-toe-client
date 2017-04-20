@@ -8,7 +8,7 @@ const api = require('./api')
 // Goes and gets the info from the ui.js file.
 const ui = require('./ui')
 // Goes and gets the info from the ui.js file.
-const game = require('/Users/andy/wdi/projects/tic-tac-toe-client/assets/scripts/game-logic/game.js')
+const game = require('../game-logic/game.js')
 
 // This is the signup function that dictates success or fail. It also prevents it from defaulting to refreshing the page.
 const onSignUp = function (event) {
