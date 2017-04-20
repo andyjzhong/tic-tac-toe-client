@@ -52,16 +52,19 @@ const clearBoard = function (event) {
   game.clearBoard()
 }
 
-// Trying to create a new game.
+// Creates a new game.
 const onCreateGame = function (event) {
   event.preventDefault()
   console.log('onCreateGame from events.js ran!')
   api.createGame()
     .then(ui.createGameSuccess)
     .catch(ui.createGameFailure)
+  setTimeout(api.getGames()
+    .then(ui.getGamesSuccess)
+    .catch(ui.getGamesFailure), 2000)
 }
 
-// Trying to update a game.
+// Updates a game.
 const onUpdateGame = function (event) {
   event.preventDefault()
   console.log('AZ: onUpdateGame from events.js ran!')
@@ -70,6 +73,15 @@ const onUpdateGame = function (event) {
   api.updateGame(id)
     .then(ui.updateGameSuccess)
     .catch(ui.updateGameFailure)
+}
+
+// Creates a new game.
+const onGetGames = function (event) {
+  event.preventDefault()
+  console.log('onGetGames from events.js ran!')
+  api.getGames()
+    .then(ui.getGamesSuccess)
+    .catch(ui.getGamesFailure)
 }
 
 // Creates an event handler to listen for when the submit button is clicked.
@@ -86,5 +98,6 @@ const addHandlers = () => {
 
 // Exports out the addHandlers function.
 module.exports = {
-  addHandlers
+  addHandlers,
+  onGetGames
 }

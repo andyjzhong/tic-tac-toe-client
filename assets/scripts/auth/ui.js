@@ -1,6 +1,8 @@
 'use strict'
 
 const authEvents = require('./events.js')
+const authApi = require('./api.js')
+const authUi = require('./ui.js')
 const authGame = require('../game-logic/game.js')
 
 const store = require('../store')
@@ -59,6 +61,9 @@ const createGameSuccess = (data) => {
   $('.banner-id').text("Let's Play!")
   console.log(data)
   store.game = data.game
+  // authApi.getGames()
+  //   .then(authUi.getGamesSuccess)
+  //   .catch(authUi.getGamesFailure)
 }
 
 const createGameFailure = (error) => {
@@ -75,13 +80,14 @@ const updateGameFailure = (error) => {
   console.error(error)
 }
 
-const getGameSuccess = (id) => {
-  console.log('AZ: getGameSuccess from ui.js ran!')
-  console.log(id)
-//  store.games = id.games
+const getGamesSuccess = (data) => {
+  console.log('WE ARE AWESOME')
+  console.log(data)
+  const count = data.games.length
+  $('#game-count').text(count)
 }
 
-const getGameFailure = (error) => {
+const getGamesFailure = (error) => {
   console.error(error)
 }
 
@@ -98,6 +104,6 @@ module.exports = {
   createGameFailure,
   updateGameSuccess,
   updateGameFailure,
-  getGameSuccess,
-  getGameFailure
+  getGamesSuccess,
+  getGamesFailure
 }

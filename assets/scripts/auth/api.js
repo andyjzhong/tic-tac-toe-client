@@ -44,7 +44,7 @@ const changePassword = (data) => {
   })
 }
 
-// Creates the Ajax function to POST data for new game!
+// Creates the Ajax function to POST data for new game
 const createGame = (data) => {
   console.log('createGame from api.js ran!')
   return $.ajax({
@@ -72,10 +72,10 @@ const updateGame = (data) => {
 }
 
 // Creates the Ajax function to POST data for new game!
-const getGame = (id) => {
-  console.log('AZ: getGame from api.js ran!')
+const getGames = (id) => {
+  console.log('AZ: getGames from api.js ran!')
   return $.ajax({
-    url: config.apiOrigin + '/games/' + id,
+    url: config.apiOrigin + '/games',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -91,5 +91,5 @@ module.exports = {
   changePassword,
   createGame,
   updateGame,
-  getGame
+  getGames
 }
