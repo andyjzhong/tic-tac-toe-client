@@ -61,9 +61,6 @@ const createGameSuccess = (data) => {
   $('.banner-id').text("Let's Play!")
   console.log(data)
   store.game = data.game
-  // authApi.getGames()
-  //   .then(authUi.getGamesSuccess)
-  //   .catch(authUi.getGamesFailure)
 }
 
 const createGameFailure = (error) => {
