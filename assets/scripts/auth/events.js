@@ -55,9 +55,9 @@ const onCreateGame = function (event) {
   api.createGame()
     .then(ui.createGameSuccess)
     .catch(ui.createGameFailure)
-  setTimeout(api.getGames()
-    .then(ui.getGamesSuccess)
-    .catch(ui.getGamesFailure), 2000)
+  // setTimeout(api.getGames()
+  //   .then(ui.getGamesSuccess)
+  //   .catch(ui.getGamesFailure), 2000)
 }
 
 // Updates a game.
@@ -84,6 +84,7 @@ const addHandlers = () => {
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
   $('#createGame').on('click', onCreateGame)
+  $('#createGame').on('click', onGetGames)
   $('.box').on('click', game.updateCell)
   $('.box').on('click', game.start)
   $('#game_info').on('submit', onUpdateGame)
