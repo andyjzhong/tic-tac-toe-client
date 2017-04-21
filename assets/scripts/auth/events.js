@@ -20,7 +20,6 @@ const onSignUp = function (event) {
 }
 
 const onSignIn = function (event) {
-  console.log('sign in ran')
   event.preventDefault()
   const data = getFormFields(this)
   api.signIn(data)
@@ -29,7 +28,6 @@ const onSignIn = function (event) {
 }
 
 const onSignOut = function (event) {
-  console.log('sign out ran')
   event.preventDefault()
   const data = getFormFields(this)
   api.signOut(data)
@@ -38,7 +36,6 @@ const onSignOut = function (event) {
 }
 
 const onChangePassword = function (event) {
-  console.log('change password ran')
   event.preventDefault()
   const data = getFormFields(this)
   api.changePassword(data)
@@ -47,7 +44,6 @@ const onChangePassword = function (event) {
 }
 
 const clearBoard = function (event) {
-  console.log('Clear Board ran!')
   event.preventDefault()
   game.clearBoard()
 }
@@ -55,7 +51,6 @@ const clearBoard = function (event) {
 // Creates a new game.
 const onCreateGame = function (event) {
   event.preventDefault()
-  console.log('onCreateGame from events.js ran!')
   game.clearBoard()
   api.createGame()
     .then(ui.createGameSuccess)
@@ -68,9 +63,7 @@ const onCreateGame = function (event) {
 // Updates a game.
 const onUpdateGame = function (event) {
   event.preventDefault()
-  console.log('AZ: onUpdateGame from events.js ran!')
   const id = getFormFields(event.target)
-  console.log("id is", id)
   api.updateGame(id)
     .then(ui.updateGameSuccess)
     .catch(ui.updateGameFailure)
@@ -79,7 +72,6 @@ const onUpdateGame = function (event) {
 // Creates a new game.
 const onGetGames = function (event) {
   event.preventDefault()
-  console.log('onGetGames from events.js ran!')
   api.getGames()
     .then(ui.getGamesSuccess)
     .catch(ui.getGamesFailure)

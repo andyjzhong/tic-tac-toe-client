@@ -33,7 +33,6 @@ const signOut = () => {
 }
 
 const changePassword = (data) => {
-  console.log('data is ', data)
   return $.ajax({
     url: config.apiOrigin + '/change-password/' + store.user.id,
     method: 'PATCH',
@@ -46,7 +45,6 @@ const changePassword = (data) => {
 
 // Creates the Ajax function to POST data for new game
 const createGame = (data) => {
-  console.log('createGame from api.js ran!')
   return $.ajax({
     url: config.apiOrigin + '/games/',
     method: 'POST',
@@ -58,9 +56,6 @@ const createGame = (data) => {
 
 // Creates the Ajax function to PATCHES data into a game id!
 const updateGame = (data) => {
-  console.log('AZ: updateGame from api.js ran!')
-  console.log('Your id is:' + data)
-  console.log(store)
   return $.ajax({
     url: config.apiOrigin + '/games/' + store.game.id,
     method: 'PATCH',
@@ -73,7 +68,6 @@ const updateGame = (data) => {
 
 // Creates the Ajax function to POST data for new game!
 const getGames = (id) => {
-  console.log('AZ: getGames from api.js ran!')
   return $.ajax({
     url: config.apiOrigin + '/games',
     method: 'GET',

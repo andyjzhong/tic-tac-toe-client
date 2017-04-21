@@ -32,7 +32,6 @@ const gameCellIds = [
 
 // Retrieves the This adds an event listener every time a box is clicked, run the updateCell function.
 const setUpGameBoard = function () {
-  console.log('AZ: Initialized Gameboard')
   $('#signUpForm, #signInForm, #signOutForm, #changePasswordForm, #game_info, #createGame, #gameArea').show()
   $('#signOutForm, #changePasswordForm, #game_info, #createGame, #gameArea').hide()
   // for (let i = 0; i < gameCellIds.length; i++) {
@@ -44,7 +43,6 @@ const setUpGameBoard = function () {
 
 // This logs an X or O into the gameBoard array.
 const updateCell = function () {
-  console.log("current player when clicking cell is", currentPlayer);
   if ($(this).html() === '' && $('#game_over_form').val() === 'false') {
     const id = this.id
     $(this).html(currentPlayer)
@@ -143,7 +141,6 @@ const oWins = function () {
 
 // Function to check if either X or O is a winner.
 const checkWinner = function () {
-  console.log('Check Winner Ran!')
   if (xWins() === true) {
     $('.banner-id').text('Player X Wins!')
     $('#game_over_form').val('true')
@@ -157,7 +154,6 @@ const checkWinner = function () {
 }
 // Function to check if there is a Draw.
 const checkDraw = function () {
-  console.log('Check Draw Ran!')
   if (turnCounter() === 9 && $('#game_over_form').val() === 'false') {
     $('.banner-id').text("It's a Draw!")
     $('#game_over_form').val('true')
