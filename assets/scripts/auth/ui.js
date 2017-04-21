@@ -59,8 +59,13 @@ const createGameSuccess = (data) => {
   $('.box').text('')
   $('#gameArea').show()
   $('.banner-id').text("Let's Play!")
-  console.log(data)
   store.game = data.game
+  $('#move_marker_form').val(authGame.currentPlayer)
+  $('#index_form').val(+$(this).attr('id'))
+  $('#game_over_form').val('false')
+  authGame.gameBoard = {}
+  authGame.currentPlayer = 'X'
+  console.log("created a new game and player is", authGame.currentPlayer);
 }
 
 const createGameFailure = (error) => {

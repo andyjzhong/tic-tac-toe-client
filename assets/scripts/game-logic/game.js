@@ -2,20 +2,19 @@
 
 const player1 = 'X'
 const player2 = 'O'
-let currentPlayer = 'O'
+let currentPlayer = 'X'
 
 // This alternates player turns.
-const currentTurn = function () {
-  currentPlayer = currentPlayer === player1 ? player2 : player1
+const currentTurn = function (id) {
   $('#move_marker_form').val(currentPlayer)
-  $('#index_form').val(+$(this).attr('id'))
+  $('#index_form').val(id)
+  currentPlayer = currentPlayer === player1 ? player2 : player1
   return currentPlayer
 }
 
 // Prevents overwriting.
 const start = function () {
-  $(this).html(currentTurn)
-  $(this).unbind()
+
 }
 
 // Creates the cell Ids array.
@@ -36,26 +35,25 @@ const setUpGameBoard = function () {
   console.log('AZ: Initialized Gameboard')
   $('#signUpForm, #signInForm, #signOutForm, #changePasswordForm, #game_info, #createGame, #gameArea').show()
   $('#signOutForm, #changePasswordForm, #game_info, #createGame, #gameArea').hide()
-  for (let i = 0; i < gameCellIds.length; i++) {
-    const elementId = gameCellIds[i]
-    const element = document.getElementById(elementId)
-    element.addEventListener('click', updateCell)
-  }
+  // for (let i = 0; i < gameCellIds.length; i++) {
+  //   const elementId = gameCellIds[i]
+  //   const element = document.getElementById(elementId)
+  //   element.addEventListener('click', updateCell)
+  // }
 }
 
 // This logs an X or O into the gameBoard array.
 const updateCell = function () {
-  console.log(gameBoard)
-  const id = this.id
-  // const index = index1[1]
-  gameBoard[id] = currentPlayer
-  checkWinner()
-  checkDraw()
-  turnCounter()
-  $('#game_info').submit()
-  if (xWins() === true || oWins() === true) {
-    $('.box').off()
-    return
+  console.log("current player when clicking cell is", currentPlayer);
+  if ($(this).html() === '' && $('#game_over_form').val() === 'false') {
+    const id = this.id
+    $(this).html(currentPlayer)
+    gameBoard[id] = currentPlayer
+    currentTurn(id)
+    checkWinner()
+    checkDraw()
+    turnCounter()
+    $('#game_info').submit()
   }
 }
 
@@ -169,24 +167,24 @@ const checkDraw = function () {
 const clickHandler = () =>
   $('.box').on('click', start)
 
-// Function for button to reset the game board.
-const clearBoard = function () {
-  console.log('clearBoard ran!')
-  // Need a function to go and clear out an array
-  // This currently just replaces all the text in the box. Does not allow user to re-click.
-  $('.box').text('')
-}
-
 const resetHandler = () =>
   $('#reset-board').on('click', clearBoard)
+
+const clearBoard = function () {
+  gameBoard = []
+  currentPlayer = 'X'
+}
 
 module.exports = {
   clickHandler,
   setUpGameBoard,
   updateCell,
-  clearBoard,
   resetHandler,
   checkWinner,
   checkDraw,
-  turnCounter
+  turnCounter,
+  start,
+  gameBoard,
+  currentPlayer,
+  clearBoard
 }

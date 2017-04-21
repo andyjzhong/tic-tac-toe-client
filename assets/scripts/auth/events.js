@@ -56,6 +56,7 @@ const clearBoard = function (event) {
 const onCreateGame = function (event) {
   event.preventDefault()
   console.log('onCreateGame from events.js ran!')
+  game.clearBoard()
   api.createGame()
     .then(ui.createGameSuccess)
     .catch(ui.createGameFailure)
@@ -69,7 +70,7 @@ const onUpdateGame = function (event) {
   event.preventDefault()
   console.log('AZ: onUpdateGame from events.js ran!')
   const id = getFormFields(event.target)
-  console.log(id)
+  console.log("id is", id)
   api.updateGame(id)
     .then(ui.updateGameSuccess)
     .catch(ui.updateGameFailure)
@@ -90,9 +91,9 @@ const addHandlers = () => {
   $('#sign-in').on('submit', onSignIn)
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
-  $('#clearBoard').on('click', clearBoard)
   $('#createGame').on('click', onCreateGame)
-  $('#updateGame').on('click', onUpdateGame)
+  $('.box').on('click', game.updateCell)
+  $('.box').on('click', game.start)
   $('#game_info').on('submit', onUpdateGame)
 }
 
