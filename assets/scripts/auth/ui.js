@@ -10,6 +10,7 @@ const store = require('../store')
 const signUpSuccess = (data) => {
   $('.account-banner').text('You have successfully created an account. Log in to Play!')
   $('#signUpForm').hide()
+  $('#sign-up').find('input:text, input:password').val('')
 }
 
 const signUpFailure = (error) => {
@@ -21,10 +22,13 @@ const signInSuccess = (data) => {
   $('#signOutForm, #changePasswordForm, #createGame').show()
   $('#signUpForm, #signInForm').hide()
   $('.account-banner').text('You have successfully logged in.')
+  $('#sign-in').find('input:text, input:password').val('')
 }
 
 const signInFailure = (error) => {
   $('.account-banner').text('Either the info you typed was wrong or you need to create an account.')
+  $('#sign-in').find('input:text, input:password').val('')
+  console.error(error)
 }
 
 const signOutSuccess = (data) => {
@@ -40,10 +44,13 @@ const signOutFailure = (error) => {
 
 const changePasswordSuccess = (data) => {
   $('.account-banner').text('You have successfully changed your password.')
+  $('#change-password').find('input:password').val('')
 }
 
 const changePasswordFailure = (error) => {
   console.error(error)
+  $('.account-banner').text('Your password is incorrect, please try again.')
+  $('#change-password').find('input:password').val('')
 }
 
 const createGameSuccess = (data) => {

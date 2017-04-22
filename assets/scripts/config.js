@@ -9,13 +9,11 @@ const config = {
 
 module.exports = config
 
-/*
-// Dev
-const config = {
-  apiOrigins: {
-    production: 'https://ga-wdi-boston.herokuapp.com'
-  }
-}
-
-module.exports = config
-*/
+// // Dev
+// const config = {
+//   apiOrigins: {
+//     production: 'https://ga-wdi-boston.herokuapp.com'
+//   }
+// }
+//
+// module.exports = config
