@@ -102,6 +102,12 @@ h4 {
   opacity: .95;
 }
 
-.reset-button {
-  margin-bottom: 20px;
+.reset-button,
+.btn-lg {
+  margin: 20px;
+}
+
+.game-stats {
+  color: $successgreen;
+  font-size: 20px;
 }
