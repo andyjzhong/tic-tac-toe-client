@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+      <title>Tic Tac Toe Game</title>
+
+
+
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags unless you know what you are doing -->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+      <!-- Do not add `script` tags unless you know what you are doing -->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+
+    <body class="container-fluid">
+
+      <!-- This is for creating the nav bar. Inverse means black/white. Fixed to top. -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+        <div class="nav-container">
+          <div class="navbar-header">
+              <!-- This button allows for the hamburger icon for smaller screen widths. -->
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a href="https://generalassemb.ly/" class="navbar-brand">General Assembly</a>
+          </div><!-- End Navbar Header -->
+          <!-- This makes a list of links appear in the navbar. The collapse class helps Bootstrap know how to handle them in order to be responsive. -->
+          <div class="collapse navbar-collapse" id="navbar-collapse">
+
+            <ul class="nav navbar-nav navlinks">
+              <li><a href="https://andyjzhong.github.io/tic-tac-toe-client/">Home</a></li>
+              <li><a href="#mgmt">Manage Account</a></li>
+            </ul>
+          </div><!-- End Navbar Collapser -->
+        </div><!-- End Navbar Container -->
+      </nav><!-- End Navbar -->
+
+      <!-- A jumbotron is a big block that looks nice. -->
+      <div class="jumbotron">
+        <div class="container text-center">
+          <h1>Tic Tac Toe Game</h1>
+          <p>Tic-tac-toe is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.</p>
+
+        </div><!-- End Jumbotron Container -->
+      </div><!-- End Jumbotron -->
+
+      <!-- This is for creating a section to include some blockquotes -->
+      <div class="container text-center block">
+        <div class="page-header" id="mgmt">
+          <h2>User Account Management</h2>
+        </div> <!-- End Page-header -->
+
+        <div class="account-banner">Please Sign In or Create an Account</div> <!-- End Banner -->
+
+            <div class="row">
+              <div id="signInForm">
+                <h3>Already Signed Up?</h3>
+                <p>Login with your E-mail and Password</p>
+                <form id="sign-in">
+                  <fieldset>
+                    <legend>Sign in</legend>
+                    <input type="text" name="credentials[email]" id="sign-in-email" placeholder="Your Email Address">
+                    <input type="password" name="credentials[password]" id="sign-in-password" placeholder="Your Password">
+                    <br>
+                    <input class="btn-lg btn-info" type="submit" name="submit" value="Sign in!">
+                  </fieldset>
+                </form>
+              </div> <!-- End Sign-In Form-->
+            </div> <!-- End Sign-In Row-->
+
+            <div class="row">
+              <div id="signUpForm">
+                <h3>Signing Up is Easy!</h3>
+                <p>Enter Your E-mail and Create a Password</p>
+                <form action="" class="form-inline" id="sign-up">
+                  <div class="form-group">
+                    <input class="col-lg-4 text-center" type="text" name="credentials[email]" id="sign-up-email" placeholder="Your Email Address">
+                    <input class="col-lg-4 text-center" type="password" name="credentials[password]" id="sign-up-password" placeholder="Create a Password">
+                    <input class="col-lg-4 text-center" type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" placeholder="Re-enter Your Password">
+                    <br>
+                    <input class="btn-lg btn-success" type="submit" name="submit" value="Create Account">
+                  </div> <!-- End Form Group -->
+                </form>
+              </div> <!-- End Sign-Up Form-->
+            </div> <!-- End Sign-Up Row -->
+
+            <div class="row">
+              <div class="col-lg-6" id="signOutForm">
+                <form id="sign-out">
+                  <fieldset>
+                    <legend>Sign out</legend>
+                    <br>
+                    <input class="btn-lg btn-warning" type="submit" name="submit" value="Sign Out!">
+                  </fieldset>
+                </form>
+              </div> <!-- End Sign-Out Form-->
+
+            <div class="col-lg-6" id="changePasswordForm">
+            <form id="change-password">
+              <fieldset>
+                <legend>Change Password</legend>
+                <input type="password" name="passwords[old]" id="old-password" placeholder="Enter Old Password">
+                <input type="password" name="passwords[new]" id="new-password" placeholder="Enter New Password">
+                <input class="btn-lg btn-warning" type="submit" name="submit" value="Change Password">
+              </fieldset>
+            </form>
+          </div> <!-- End Change PW Form-->
+      </div> <!-- End Row -->
+    </div> <!-- End Container -->
+    <br>
+
+      <div class="container text-center block">
+        <section id="gameArea">
+          <div class="page-header" id="playnow">
+            <h2>Play Now</h2>
+          </div> <!-- End Page-header -->
+        <div class="gameboard text-center col-12 col-xs-12">
+
+          <div class="banner-id">Let's Play!</div> <!-- End Banner -->
+
+          <div class="row text-center top-row">
+            <div id="0" class="col-xs-4 left top box"></div>
+            <div id="1" class="col-xs-4 center top box"></div>
+            <div id="2" class="col-xs-4 right top box"></div>
+          </div> <!-- End Row 1 -->
+
+          <div class="row text-center mid-row">
+            <div id="3" class="col-xs-4 left mid box"></div>
+            <div id="4" class="col-xs-4 center mid box"></div>
+            <div id="5" class="col-xs-4 right mid box"></div>
+          </div> <!-- End Row 2 -->
+
+          <div class="row text-center bot-row">
+            <div id="6" class="col-xs-4 left bot box"></div>
+            <div id="7" class="col-xs-4 center bot box"></div>
+            <div id="8" class="col-xs-4 right bot box"></div>
+          </div> <!-- End Row 3 -->
+        </div> <!-- End Game Board -->
+
+      </section>
+
+      <form id="createGame">
+        <input class="btn btn-lg btn-danger reset-button" type="submit" name="submit" value="Create New Game">
+      </form>
+      <form id="getGamesPlayed">
+        <input class="btn btn-sm btn-primary reset-button" type="submit" name="submit" value="View Games Played">
+      </form>
+      <div class="game-stats">Total Games Played: <span id='game-count'>0</span></div> <!-- End Stats -->
+
+
+
+    </div> <!-- End Play Now Container -->
+    <br>
+
+      <!-- This is for creating a section to include some blockquotes -->
+      <div class="container text-center block">
+        <section>
+          <div class="page-header" id="inspiration">
+            <h2>Inspiration</h2>
+          </div> <!-- End Page-header -->
+
+          <div class="row">
+            <div class="col-lg-4">
+              <blockquote>
+                <p>"Failure is simply the opportunity to begin again, this time more intelligently."</p>
+                <footer>Henry Ford</footer>
+              </blockquote>
+            </div> <!-- End Col 1 -->
+
+            <div class="col-lg-4">
+              <blockquote>
+                <p>"There is no better than adversity. Every defeat, every heartbreak, every loss, contains its own seed, its own lesson on how to improve your performance next time."</p>
+                <footer>Malcolm X</footer>
+              </blockquote>
+            </div> <!-- End Col 2 -->
+
+            <div class="col-lg-4">
+              <blockquote>
+                <p>“Success is not final, failure is not fatal: it is the courage to continue that counts.”</p>
+                <footer>Winston Churchill</footer>
+              </blockquote>
+            </div> <!-- End Col 3 -->
+
+          </div> <!-- End Row -->
+        </section> <!-- End Page section -->
+      </div> <!-- End Inspiration Container -->
+    <br>
+
+    <!-- Update Game Form-->
+    <form id="game_info">
+      <input id="index_form" name="game[cell][index]" type="text" value="0">
+      <input id="move_marker_form" name="game[cell][value]" type="text" value="x">
+      <input id="game_over_form" name="game[over]" type="text" value="false">
+    </form>
+
+    </body>
+
+</html>
