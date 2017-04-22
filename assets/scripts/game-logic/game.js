@@ -32,8 +32,8 @@ const gameCellIds = [
 
 // Retrieves the This adds an event listener every time a box is clicked, run the updateCell function.
 const setUpGameBoard = function () {
-  $('#signUpForm, #signInForm, #signOutForm, #changePasswordForm, #game_info, #createGame, #gameArea').show()
-  $('#signOutForm, #changePasswordForm, #game_info, #createGame, #gameArea').hide()
+  $('#signUpForm, #signInForm, #signOutForm, #changePasswordForm, #game_info, #createGame, #gameArea, #getGamesPlayed, .game-stats').show()
+  $('#signOutForm, #changePasswordForm, #game_info, #createGame, #gameArea, #getGamesPlayed, .game-stats').hide()
   // for (let i = 0; i < gameCellIds.length; i++) {
   //   const elementId = gameCellIds[i]
   //   const element = document.getElementById(elementId)

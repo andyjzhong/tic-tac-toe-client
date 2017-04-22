@@ -19,7 +19,7 @@ const signUpFailure = (error) => {
 
 const signInSuccess = (data) => {
   store.user = data.user
-  $('#signOutForm, #changePasswordForm, #createGame').show()
+  $('#signOutForm, #changePasswordForm, #createGame, #getGamesPlayed').show()
   $('#signUpForm, #signInForm').hide()
   $('.account-banner').text('You have successfully logged in.')
   $('#sign-in').find('input:text, input:password').val('')
@@ -34,7 +34,7 @@ const signInFailure = (error) => {
 const signOutSuccess = (data) => {
   store.user = null
   $('#signInForm, #signUpForm').show()
-  $('#signOutForm, #changePasswordForm, #createGame, #gameArea').hide()
+  $('#signOutForm, #changePasswordForm, #createGame, #gameArea, #getGamesPlayed, .game-stats').hide()
   $('.account-banner').text('You have successfully logged out.')
 }
 
@@ -56,6 +56,7 @@ const changePasswordFailure = (error) => {
 const createGameSuccess = (data) => {
   $('.box').text('')
   $('#gameArea').show()
+  $('.game-stats').hide()
   $('.banner-id').text("Let's Play!")
   store.game = data.game
   $('#move_marker_form').val(authGame.currentPlayer)
@@ -78,6 +79,7 @@ const updateGameFailure = (error) => {
 
 const getGamesSuccess = (data) => {
   const count = data.games.length
+  $('.game-stats').show()
   $('#game-count').text(count)
 }
 

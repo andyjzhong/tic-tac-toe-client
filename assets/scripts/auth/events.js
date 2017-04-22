@@ -83,11 +83,11 @@ const addHandlers = () => {
   $('#sign-in').on('submit', onSignIn)
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
-  $('#createGame').on('click', onCreateGame)
-  $('#createGame').on('click', onGetGames)
   $('.box').on('click', game.updateCell)
   $('.box').on('click', game.start)
   $('#game_info').on('submit', onUpdateGame)
+  $('#createGame').on('click', onCreateGame)
+  $('#getGamesPlayed').on('click', onGetGames)
 }
 
 // Exports out the addHandlers function.
