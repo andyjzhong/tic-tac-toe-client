@@ -63,24 +63,29 @@ Developing an SPA after only about 2-3 weeks of formal training definitely prese
 
 -	Now that the previous step has been completed, it was now time to create the ability to display a ‘Draw Game’ once a game has been completed with no clear winner. This was a personal victory for me because I felt like I was able to really tackle it from a developer’s mindset. I created a turn counter and if it reaches nine without any of the win functions triggering, it would change the banner text to say, ‘Draw Game!’
 
--	Current Challenges: Getting it hooked up to the API. Getting a reset button to work.
 
+## Resolved Issues
 
-## Unresolved Issues
+Below is a list of resolved issues that I addressed in between versions 1.0 and 2.0.
+-	Successful Authentication Network Activity: User is now able to connect to the network and perform actions related to creating a user, signing in, logging out, and changing passwords.
+-	User Feedback for Success/Fail of Authentication Activity: A banner in red font within the User Account Management section now provides feedback upon entering each authentication action on success and fail.
+-	Network Activity for Gameplay: Gameplay is now connected to the API. Each game is created upon clicking the Create New Game button and each click on the game board registers a Patch request to update the game cells.
+-	Visually Display the Results of Retrieving Game Stats: A new View Games Played button is available upon signing in. Once clicked, it will display a banner below with green text that returns a Get request for the total number of games played.
+-	Removed User-facing Bugs: The Game Board, Sign Out, and Change Password functions are now hidden upon loading the webpage and will show up after successful sign in. Similarly, upon successful sign in, the Sign Up and Sign In functions will become hidden. Also removed any non-functional buttons and links and added functionality for clearing out forms upon submission.
+-	Win Condition: Once a game is won (or ends in a draw), the blue text above the game board will indicate the result of the game.
+-	Ends Game after Win: When a winner is determined, the user is no longer able to continue playing the game by clicking additional cells.
+-	New Game Available Upon Create New Game: When the Create Game button is clicked, it successfully clears the board and creates a new game where the user can continually play again and again.
 
-Below is a list of unresolved issues that I would like to address for upcoming versions.
--	Link Sign-up, Sign-in, Sign-out, and Change Password functionality to API
--	Support playing multiple games (adding a reset/create game function)
--	Visually display game statistics
--	Creating new games on the server
-
+Additionally, I recommend testing the game on mobile for responsiveness.
 
 ## Version History
 
 Version 1.0 – Game Project Launch
 -	Initial Tic-Tac-Toe SPA for Presentation
+Version 2.0 – Game Project Resubmission
+-	Resubmission for Tic-Tac-Toe
+-	See Resolved Issues section for a complete list of changes
 
-Future Versions – TBD
 
 
 ## [License](LICENSE)
