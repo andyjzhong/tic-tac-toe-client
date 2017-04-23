@@ -82,6 +82,8 @@ Additionally, I recommend testing the game on mobile for responsiveness.
 
 Version 1.0 – Game Project Launch
 -	Initial Tic-Tac-Toe SPA for Presentation
+
+
 Version 2.0 – Game Project Resubmission
 -	Resubmission for Tic-Tac-Toe
 -	See Resolved Issues section for a complete list of changes
